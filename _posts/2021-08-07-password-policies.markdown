@@ -14,10 +14,10 @@ We all know what a safe and secure password is right? It should have at least 8 
 ## Why the current password policies don't work
 Let's break down each of the rules that are commonly in place.
 
-### Your password should be at least 8 characters
+### Passwords should be at least 8 characters
 This one is actually not bad. 8 characters gives quite a wide variety of possible combinations. Longer is better but 8 is generally enough.
 
-### Your password should be complex i.e. 1 uppercase, 1 lowercase, 1 number and 1 symbol
+### Passwords should be complex i.e. 1 uppercase, 1 lowercase, 1 number and 1 symbol
 This rule has been proven over and over again to not work. The reason for this is fairly simple we all substitute the same characters. And why do we all replace the same characters because they are visually very close. We also tend to fall back on things we already know, so most will put a capital at the start and a punctuation at the end.
 Let's take the [classic](https://xkcd.com/936/) "correct horse battery staple". If you were to ask random people to make this "secure" you will find  that they will do one or more of the following:
 * Capital the C fro correct
@@ -30,7 +30,7 @@ Let's take the [classic](https://xkcd.com/936/) "correct horse battery staple". 
 
 All this just to show that we are not as clever as we think we are. We all have the same ideas. Malicious actors are well aware of these substitutions and as such will also do the same substitutions when attempting to guess passwords.
 
-### Your password should be changed regularly
+### Passwords should be changed regularly
 Just with the complexity rule, password expiry has been proven over and over to not work. Most people will simply add a number to the end or beginning of their password and than just adjust the number when it comes time to change your password. And again there are a few very common strategies people use:
 * Increment the number by 1
 * Use the number of the month
@@ -38,23 +38,23 @@ Just with the complexity rule, password expiry has been proven over and over to 
 
 Again these strategies are very trivial for a malicious actor to account for. If they managed to get a hold of one of your passwords (e.g. through a data breach) they will notice the number and will be able to work ot the pattern pretty easily.
 
-### Your password should be different from previous passwords
+### Passwords should be different from previous passwords
 As I described in the previous point the most common strategy is to adjust a number at the end or beginning to change you password. This doesn't really constitute changing the password as a malicious actor can easily see the pattern and now only needs to guess 1  character (or at maximum a few characters) of the password. This might give someone a false sense of security that their password is safe when in reality it is likely less secure than if it was never changed.
 
-## So if the policies that are currently adopted widely don't work, what should we use instead?
+## What should I do instead?
 
 Fortunately there has been lots of research in this area. And my recommendations below are based on what all that research says.
 
-### Your password should be at least 8 characters
+### Passwords should be at least 8 characters
 As noted before this is a pretty good rule. Research done by [Microsoft](https://docs.microsoft.com/en-us/microsoft-365/admin/misc/password-policy-recommendations?view=o365-worldwide#requiring-long-passwords) has shown that when passwords get too long users will start using repeating patterns. These long passwords would be easier to guess than shorter passwords that do not repeat.
 
-### Your password doesn't need any complexity
+### Passwords don't need any complexity
 Since most of use employ the same substitution techniques, complexity serves no real purpose. It doesn't make the passwords any harder to guess, but it does make them harder to remember. This is cited in virtually all current password guidance documents from entities that have done password research. NIST notes the below in their [guidance](https://pages.nist.gov/800-63-3/sp800-63b.html#appA):
 >composition rules are commonly used in an attempt to increase the difficulty of guessing user-chosen passwords. Research has shown, however, that users respond in very predictable ways to the requirements imposed by composition rules. For example, a user that might have chosen “password” as their password would be relatively likely to choose “Password1” if required to include an uppercase letter and a number, or “Password1!” if a symbol is also required.
 
 Microsoft and the NCSC also make similar remarks in their guidance which you can find [here](https://docs.microsoft.com/en-us/microsoft-365/admin/misc/password-policy-recommendations?view=o365-worldwide#requiring-the-use-of-multiple-character-sets) and [here](https://www.ncsc.gov.uk/collection/passwords/updating-your-approach#tip5-password-collection)
 
-### Your password does not need to expire regularly
+### Passwords do not need to expire regularly
 As we saw previously users do not change their whole password when they are forced to change it. This can give a false sense of security that the password is safe even if there has been a data breach because it was changed recently. The reality is that the new password is less secure as it can easily be guessed. The password [guidance from Microsoft](https://www.ncsc.gov.uk/collection/passwords/updating-your-approach#tip5-password-collection) says the following:
 >Password expiration requirements do more harm than good, because these requirements make users select predictable passwords, composed of sequential words and numbers which are closely related to each other. In these cases, the next password can be predicted based on the previous password. Password expiration requirements offer no containment benefits because cyber criminals almost always use credentials as soon as they compromise them.
 
@@ -66,7 +66,7 @@ Rather than enforcing arbitrary rules on password you should be using a list of 
 
 NIST offers a similar [recommendation](https://pages.nist.gov/800-63-3/sp800-63b.html#appA).
 
-### Passwords should only be changed when they are suspected to be compromised
+### Only change Passwords when they are suspected to have been compromised
 While there is no direct mention of password history in any of he guidance. Common sense dictates that if your password never expires you will not have to force the password to be different to previous passwords. What you should instead be doing is monitoring new data breaches and comparing the passwords in those data breaches to the passwords of your users. If a user has been found to have a password that is the same as in the data breach you should force a password change onto the user. [Have I been pwned](https://haveibeenpwned.com/) is an excellent free service you can use for checking if password or users where in a data breach.
 
 ### Use Multi-factor Authentication
