@@ -1,0 +1,32 @@
+{% include calculate_relative_base.html %}
+{% include escape-404.html %}
+
+<footer class="main-footer">
+    <div class="footer-wrapper">
+        <div class="logo-symbol">
+            <a class="logo-link" title="{{ site.title }}" href="{{ relativebase }}">
+                <img class="logo-icon" id="logo-icon" src="../assets/img/branding/icon.png" alt="{{ site.title }}">
+            </a>
+        </div>
+        <div class="copyright">
+          <p>{{site.time | date: '%Y'}} &copy; {{site.author}}</p>
+        </div>
+        <div class="footer-nav">
+            <div>
+                <a href="{{ relativebase }}archive.html">
+                    Posts
+                </a>
+            </div>
+            <div>
+                <a href="{{ relativebase }}tags.html">
+                    Tags
+                </a>
+            </div>
+            <div>
+                <a href="{{ relativebase }}about.html">
+                    About
+                </a>
+            </div>
+        </div>
+    </div>
+</footer> <!-- End Footer -->

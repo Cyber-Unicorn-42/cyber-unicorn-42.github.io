@@ -1,0 +1,38 @@
+I"<p>We all know what a safe and secure password is right? It should have at least 8 characters, contain at least 1 uppercase, 1 lowercase, 1 numbers and 1 symbols, it should change regularly and you can reuse an arbiratry number of your previous passwords. But does this actually make passwords more secure?</p>
+
+<h1 id="why-the-current-password-policies-dont-work">Why the current password policies don’t work</h1>
+
+<p>Let’s break down each of the rules that are commonly in place.</p>
+<ol>
+  <li>Your password should be at least 8 characters
+This one is actually not bad. 8 charcaters gives quite a wide variety of possbile combinations. Longer is better but 8 is generally enough.</li>
+  <li>Your password should be complex i.e. 1 uppercase, 1 lowercase, 1 number and 1 symbol
+This rule has been proven over and over again to not work. The reason for this is fairly simple we all substitute the same characters. And why do we all replace the same characters because they are visually very close. We also tend to fall back on things we already know, so most will put a capital at the start and a punctionation at the end.
+Let’s take the <a href="https://xkcd.com/936/">classic</a> “correct horse battery staple”. If you were to ask random people to make this “secure” you will find  that they will do one or more of the following:
+    <ul>
+      <li>Capital the C fro correct</li>
+      <li>Capital the first letter of each word</li>
+      <li>Add a exclamation mark or dot at the end</li>
+      <li>Replace the o’s with 0’s</li>
+      <li>Replace the s’s with 5’s</li>
+      <li>Replace the e’s woth 3’s</li>
+      <li>Replace the a’s with 4’s
+All this just to show that we are not as clever as we think we are. We all have the same ideas. Malicious actors are well aware of these subsitutions and as such will also do the same substitutions when attempting to guess passwords.</li>
+    </ul>
+  </li>
+  <li>Your password should be changed regularly
+Just with the complexity rule, password expiry has been proven over and over to not work. Most people will simply add a number to the end or beginning of their password and than just adjust the number when it comes time to change your password. And again there are a few very common strategies people use:
+    <ul>
+      <li>Increment the number by 1</li>
+      <li>Use the number of the month</li>
+      <li>Use the number of the month plus the year (either 2 or 4 digits)
+Again these strategies are very trivial for a malicious actor to account for. If they managed to get a hold of one of your passwords (e.g. through a data breach) they will notice the number and will be able to work ot the pattern pretty easily.</li>
+    </ul>
+  </li>
+  <li>Your password should be different from previous passwords
+As I described in the previous point the most common strategy is to adjust a number at the end or beginning to change you password. This doesn’t really constitute changing the password as a malicious actor can easily see the pattern and now only needs to guess 1  character (or at maximum a few characters) of the password. This might give someone a false sense of security that their password is safe when in reality it is likely less secure than if it was never changed.</li>
+</ol>
+
+<h1 id="what-policies-should-be-in-use">What policies should be in use</h1>
+
+:ET

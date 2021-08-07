@@ -1,0 +1,83 @@
+# Site settings
+title: Peter Dodemont
+description: 'My experiences with security, IOT and technology in general' # this means to ignore newlines until "baseurl:"
+permalink: ':title:output_ext'
+baseurl: "/" # the subpath of your site, e.g. /blog
+url: "https://peterdodemont.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+logo: "/assets/img/branding/logo.svg"
+logo-icon: "/assets/img/branding/icon.svg"
+logo-icon-SEO: "/assets/img/branding/icon.png" # must be a non SVG file
+
+# Night/Dark mode
+# Default mode is "auto", "auto" is for auto nightshift
+# (19:00 - 07:00), "manual" is for manual toggle, and
+# "on/off" is for default on/off.
+#
+# Whatever the user's choice is, it will supersede the
+# default setting of the site and be kept during the
+# visit (session). Only the dark mode setting is "manual",
+# it will be always kept on every visit (i.e. no matter
+# the browser is closed or not)
+night_mode: "auto"
+
+logo-dark: "/assets/img/branding/logo-dark.svg"
+highlight_theme: syntax-base16.monokai.dark # select a dark theme for the code highlighter if needed
+
+# Author settings
+author: Peter Dodemont # add your name
+author-pic: peter_about.jpg
+about-author: 'I have over 15 years experience in IT starting out as a service desk agent to now being a systems engineer with a focus on security.
+I enjoy most technology and try to use it to make my life more convient (in the long run :) ).
+I love learning and enjoy passing on what I have learned to others. Feel free to contact me on Twitter with any questions.' # this means to ignore newlines
+
+# Contact links
+email: # Add your Email address
+phone: # Add your Phone number
+website: https://peterdodemont.github.io # Add your website
+linkedin: peter-dodemont-23b16174 # Add your Linkedin handle
+github: PeterDodemont # Add your Github handle
+twitter: '@PeterDodemont' # Add your Twitter handle
+bandcamp: # Add your Bandcamp username
+
+# Newsletter
+# mailchimp: "https://github.us1.list-manage.com/subscribe/post?u=8ece198b3eb260e6838461a60&amp;id=397d90b5f4"
+
+# Disqus
+#discus_identifier: amaynez-github-io # Add your discus identifier
+#comments_curtain: yes # leave empty to show the disqus embed directly
+
+# Tracker
+#analytics: G-R8SZS2YBZK
+#fbadmin: ar.maybach
+
+# Paginate
+paginate: 6
+paginate_path: 'page:num'
+words_per_minute: 200
+
+# Build settings
+markdown: kramdown
+mathjax: true
+highlighter: rouge
+compress_html:
+  clippings: all
+  comments: all
+  startings: [html, head, body]
+
+# Outputting
+timezone: #Australia/Sydney # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+
+category_archive:
+  type: liquid
+  path: /categories/
+
+sass:
+  style: compressed
+
+plugins:
+  - jekyll-paginate
+  - jekyll-feed
+  - jekyll-sitemap
+
+include: [_pages]
+exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock", "package-lock.json", "assets/css/sass/"]

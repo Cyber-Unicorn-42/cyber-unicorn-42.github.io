@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="37.482662mm"
+   height="37.482662mm"
+   viewBox="0 0 37.482662 37.482662"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   sodipodi:docname="icon.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#111111"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.77771465"
+     inkscape:cx="301.52447"
+     inkscape:cy="401.17542"
+     inkscape:window-width="1718"
+     inkscape:window-height="1360"
+     inkscape:window-x="3589"
+     inkscape:window-y="190"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <rect
+       x="65.576752"
+       y="100.29386"
+       width="167.15643"
+       height="312.45395"
+       id="rect5335" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-25.175259,-42.125574)">
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text5333"
+       style="font-size:266.667px;line-height:1.25;font-family:'3D Thirteen Pixel Fonts';-inkscape-font-specification:'3D Thirteen Pixel Fonts';white-space:pre;shape-inside:url(#rect5335)" />
+    <text
+       xml:space="preserve"
+       style="font-size:70.5556px;line-height:1.25;font-family:'3D Thirteen Pixel Fonts';-inkscape-font-specification:'3D Thirteen Pixel Fonts';fill:#550000;stroke-width:0.264583"
+       x="25.175259"
+       y="79.608238"
+       id="text23411"><tspan
+         sodipodi:role="line"
+         id="tspan23409"
+         style="font-size:70.5556px;fill:#550000;stroke-width:0.264583"
+         x="25.175259"
+         y="79.608238">P</tspan></text>
+  </g>
+</svg>
