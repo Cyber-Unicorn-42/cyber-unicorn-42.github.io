@@ -9,7 +9,7 @@ img: posts/20210807/password.png
 tags: [Security,Passwords]
 author: Peter Dodemont
 ---
-We all know what a safe and secure password is right? It should have at least 8 characters, contain at least 1 uppercase, 1 lowercase, 1 numbers and 1 symbols, it should change regularly and you can reuse an arbitrary number of your previous passwords. But does this actually make passwords more secure?
+We all know what a safe and secure password is right? It should have at least 8 characters, contain at least 1 uppercase, 1 lowercase, 1 number and 1 symbol, it should change regularly and you can reuse an arbitrary number of your previous passwords. But does this actually make passwords more secure?
 
 ## Why the current password policies don't work
 Let's break down each of the rules that are commonly in place.
@@ -20,7 +20,7 @@ This one is actually not bad. 8 characters gives quite a wide variety of possibl
 ### Passwords should be complex i.e. 1 uppercase, 1 lowercase, 1 number and 1 symbol
 This rule has been proven over and over again to not work. The reason for this is fairly simple, we all substitute the same characters. And why do we all replace the same characters because they are visually very close. We also tend to fall back on things we already know, so most will put a capital at the start and a punctuation at the end.
 Let's take the [classic](https://xkcd.com/936/) "correct horse battery staple". If you were to ask random people to make this "secure" you will find  that they will do one or more of the following:
-* Capital the C fro correct
+* Capital the C of correct
 * Capital the first letter of each word
 * Add a exclamation mark or dot at the end
 * Replace the o's with 0's
@@ -28,7 +28,7 @@ Let's take the [classic](https://xkcd.com/936/) "correct horse battery staple". 
 * Replace the e's with 3's
 * Replace the a's with 4's
 
-All this just to show that we are not as clever as we think we are. We all have the same ideas. Malicious actors are well aware of these substitutions and as such will also do the same substitutions when attempting to guess passwords.
+As you can see, we are not as clever as we think we are. We all have the same ideas. Malicious actors are well aware of these substitutions and as such will also do the same substitutions when attempting to guess passwords.
 
 ### Passwords should be changed regularly
 Just with the complexity rule, password expiry has been proven over and over to not work. Most people will simply add a number to the end or beginning of their password and then just adjust the number when it comes time to change your password. And again there are a few very common strategies people use:
@@ -61,7 +61,7 @@ As we saw previously users do not change their whole password when they are forc
 The NCSC provides very similar [guidance](https://www.ncsc.gov.uk/collection/passwords/updating-your-approach#tip4-password-collection) as well.
 
 ### Use banned password lists
-Rather than enforcing arbitrary rules on password you should be using a list of passwords users cannot use. This list of banned passwords should include a corpus of previous breached passwords as will as any words that refer back to the business or website that users are setting their password for. For example of your company name was Security Pete and you were based out of Sydney Australia, you would also ban the use of the words "security", "pete", "sydney" and "australia". These words would be easily guessable if they were used in a password. Microsoft even considers this to be [the most important](https://docs.microsoft.com/en-us/microsoft-365/admin/misc/password-policy-recommendations?view=o365-worldwide#ban-common-passwords) requirement for passwords:
+Rather than enforcing arbitrary rules on password you should be using a list of passwords users cannot use. This list of banned passwords should include a corpus of previous breached passwords as will as any words that refer back to the business or website that users are setting their password for. For example if your company name was Security Pete and you were based out of Sydney Australia, you would also ban the use of the words "security", "pete", "sydney" and "australia". These words would be easily guessable if they were used in a password. Microsoft even considers this to be [the most important](https://docs.microsoft.com/en-us/microsoft-365/admin/misc/password-policy-recommendations?view=o365-worldwide#ban-common-passwords) requirement for passwords:
 >The most important password requirement you should put on your users when creating passwords is to ban the use of common passwords to reduce your organization's susceptibility to brute force password attacks. Common user passwords include: abcdefg, password, monkey.
 
 NIST offers a similar [recommendation](https://pages.nist.gov/800-63-3/sp800-63b.html#appA).
@@ -71,7 +71,7 @@ While there is no direct mention of password history in any of the guidance. Com
 
 ### Use Multi-factor Authentication
 While this is not directly a password policy, it is an integral part in the password lifecycle. Using multi-factor authentication gives you additional security even when the user's password has been compromised. And gives you the ability to verify a users identity when asking the users to perform a password reset.
-From personal experience having to provide multi-factor authentication every single time you authenticate becomes extremely time-consuming especially if it happens multiple times in a day. As such I recommend implementing risk based multi-factor authentication. Risk based multi-factor authentication uses a number of factors from the user's session as the additional factors rather than prompting the user for the additional factor. It only prompts the user for the additional factor if the session factors indicate the user or the session in high risk. These session factors generally include things like time of the day, current location, is it physically possible for the user to have travelled between their previous location and their current location, are they anonymized (e.g. Tor browser, VPN) ...
+From personal experience having to provide multi-factor authentication every single time you authenticate becomes extremely time-consuming especially if it happens multiple times in a day. As such I recommend implementing risk based multi-factor authentication. Risk based multi-factor authentication uses a number of factors from the user's session as the additional factors rather than prompting the user for the additional factor. It only prompts the user for the additional factor if the session factors indicate the user or the session is high risk. These session factors generally include things like time of the day, current location, is it physically possible for the user to have travelled between their previous location and their current location, are they anonymized (e.g. Tor browser, VPN) ...
 While risk based authentication does not provide the same level of security as prompting the user for a factor each time, it improves security significantly while also reducing user friction significantly.
 
 ## Final thoughts
