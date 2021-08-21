@@ -3,7 +3,7 @@
 [   
       
   {
-  "tag" : "Passwords",
+  "tag" : "Corporate",
   "posts" : [
       
       "./password-policies.html"
@@ -13,8 +13,32 @@
     
       
   {
+  "tag" : "Passwords",
+  "posts" : [
+      
+      "./password-manager.html",
+      
+      "./password-policies.html"
+      
+    ]
+  } ,
+    
+      
+  {
+  "tag" : "Personal",
+  "posts" : [
+      
+      "./password-manager.html"
+      
+    ]
+  } ,
+    
+      
+  {
   "tag" : "Security",
   "posts" : [
+      
+      "./password-manager.html",
       
       "./password-policies.html"
       
