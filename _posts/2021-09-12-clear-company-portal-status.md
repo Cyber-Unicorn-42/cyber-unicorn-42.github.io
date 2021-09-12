@@ -11,14 +11,14 @@ author: Peter Dodemont
 ---
 If you are reading this you have probably come across an issue where an Microsoft Endpoint Manager (aka Intune and referred to from now on as MEM) deployed app has gotten stuck in a particular state most commonly downloading or installing. And while there is no why to clear this from the GUI there is a way to clear the status.
 First thing you are going to need is the GUID of the application that is stuck. I have found the easiest way to get the GUID is by going to the MEM portal and into the application details. The final part of the URL will then be the GUID of the application.
-![MEM/Intune app GUID](/assests/img/posts/2021-09-12-clear-company-portal-status/intune-app-guid.png "MEM/Intune app GUID")
+![MEM/Intune app GUID](/assets/img/posts/2021-09-12-clear-company-portal-status/intune-app-guid.png "MEM/Intune app GUID")
 Once you have the GUID you need to open the registry editor and go to
 ```
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\IntuneManagementExtension\SideCarPolicies\StatusServiceReports\UserOrDeviceGUID
 (The "UserOrDeviceGUID" is the Azure GUID of the user or device that the app has been deployed to)
 ```
 Here delete the key that matches the GUID of the application that is stuck. You can look the UserOrDeviceGUID if you want, but in most cases there is only a limited number of GUID there and it is more efficient to just look through them quickly.
-![Regedit Status Clearing](/assests/img/posts/2021-09-12-clear-company-portal-status/regedit-sidecarpolicies.png "Regedit Status Clearing")
+![Regedit Status Clearing](/assets/img/posts/2021-09-12-clear-company-portal-status/regedit-sidecarpolicies.png "Regedit Status Clearing")
 You will notice that one of the values underneath the application GUID key is named "Status" and that this value will match the status in the company portal.
 Once you delete the entire key, just restart the company portal an the app will not present as failed and you can re-launch the install.
 
@@ -27,7 +27,7 @@ For good measure you can also go to
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\IntuneManagementExtension\Win32Apps\UserOrDeviceGUID
 ```
 and delete key with the application GUID there as well. This clears the compliance status of the app, but that hasn't been something I have found to be necessary.
-![Regedit Compliance Clearing](/assests/img/posts/2021-09-12-clear-company-portal-status/regedit-win32apps.png "Regedit Compliance Clearing")
+![Regedit Compliance Clearing](/assets/img/posts/2021-09-12-clear-company-portal-status/regedit-win32apps.png "Regedit Compliance Clearing")
 
 If you also want to force a re-download of the application files you will need to go to
 ```
