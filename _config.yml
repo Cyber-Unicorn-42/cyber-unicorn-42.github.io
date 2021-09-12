@@ -26,9 +26,9 @@ highlight_theme: syntax-base16.monokai.dark # select a dark theme for the code h
 # Author settings
 author: Peter Dodemont # add your name
 author-pic: peter_about.jpg
-about-author: 'I have over 15 years experience in IT starting out as a service desk agent to now being a systems engineer with a focus on security.
-I enjoy most technology and try to use it to make my life more convient (in the long run :) ).
-I love learning and enjoy passing on what I have learned to others. Feel free to contact me on Twitter with any questions.' # this means to ignore newlines
+about-author: 'I have over 15 years experience in IT. Starting out as a service desk agent to now being a systems engineer with a focus on security.
+I enjoy most technology and try to use it to make my life more convenient (in the long run :) ).
+I love learning and enjoy passing on what I have learned to others. Feel free to contact me with any questions.' # this means to ignore newlines
 
 # Contact links
 email: # Add your Email address
