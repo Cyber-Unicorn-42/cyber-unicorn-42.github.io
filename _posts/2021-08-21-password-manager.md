@@ -5,7 +5,7 @@ show_date: true
 title:  Managing your passwords
 date:   2021-08-21 10:42:00 +1000
 description: How to manage all your passwords and make them as secure as possible.
-img: posts/password_manager.png
+img: posts/2021-08-21-password-manager/hero.png
 tags: [Security,Passwords,Personal]
 author: Peter Dodemont
 ---

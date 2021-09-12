@@ -5,7 +5,7 @@ show_date: true
 title:  Password Policies For The Current Era
 date:   2021-08-07 11:09:20 +1000
 description: What should password policies look like in this day and age.
-img: posts/password_policies.jpg
+img: posts/2021-08-07-password-policies/hero.jpg
 tags: [Security,Passwords,Corporate]
 author: Peter Dodemont
 ---
