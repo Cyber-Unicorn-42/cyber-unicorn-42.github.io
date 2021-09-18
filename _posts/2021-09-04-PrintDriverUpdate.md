@@ -6,7 +6,7 @@ title:  Fixing the point and print driver update prompt
 date:   2021-09-04 10:00:00 +1000
 description: Fixing the printer driver prompts from users without compromising your security.
 img: posts/2021-09-04-PrintDriverUpdate/hero.png
-tags: [PrintNightmare,Drivers,Intune,PowerShell,EndpointManager,MEM]]
+tags: [PrintNightmare,Drivers,Intune,PowerShell,EndpointManager,MEM]
 author: Peter Dodemont
 ---
 In this article I will go through what I did to get rid of the driver update prompts that users have been getting after Microsoft's August security patches. The patches included a change in the default behavior of point and print driver installations ([see here](https://msrc-blog.microsoft.com/2021/08/10/point-and-print-default-behavior-change/)). After deployment of the patches non-admin users were no longer able to install drivers using point and print unless some registry tweaks where applied.
