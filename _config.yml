@@ -65,7 +65,7 @@ compress_html:
   startings: [html, head, body]
 
 # Outputting
-timezone: #Australia/Sydney # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: Australia/Sydney # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 category_archive:
   type: liquid
