@@ -3,7 +3,7 @@ layout: post
 read_time: true
 show_date: true
 title:  Mapping network printer via Intune/MEM
-date:   2021-09-25 10:00:00 +1000
+date:   2021-09-25 10:00 +1000
 description: How to provide users the ability to map printers in MEM/Intune and automatically map printers based on their location.
 img: posts/2021-09-25-map-printers-intune/hero.png
 tags: [Printer,Intune,PowerShell,EndpointManager,MEM]
