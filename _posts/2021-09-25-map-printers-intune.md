@@ -2,12 +2,13 @@
 layout: post
 read_time: true
 show_date: true
-title:  Mapping network printer via Intune/MEM
-date:   2021-09-25 10:00 +1000
+title:  Mapping network printers via Intune/MEM
+date:   2021-09-25 10:00:00 +1000
 description: How to provide users the ability to map printers in MEM/Intune and automatically map printers based on their location.
 img: posts/2021-09-25-map-printers-intune/hero.png
 tags: [Printer,Intune,PowerShell,EndpointManager,MEM]
 author: Peter Dodemont
+published: false
 ---
 Adding printers inevitably forms part of the onboarding process for all new users. You can automate this part easily enough through GPO. But what if you also want to provide users with a way to easily map printers through a familiar interface? In this article I'll show you how I did this in MEM. I wrote the scripts for MEM, but they should be able to be used in any deployment product that supports PowerShell. The process is simple, first create some dynamic groups in Azure AD, then create applications in MEM and finally assign the applications to the groups.
 If you just want the scripts, the install script is [here](https://github.com/PeterDodemont/Scripts/tree/main/Install-Scripts/Map-Printers.ps1), the detection script is [here](https://github.com/PeterDodemont/Scripts/tree/main/Intune/Printer-Detection.ps1) and the explanation of how it works is [here](#TheScripts).
