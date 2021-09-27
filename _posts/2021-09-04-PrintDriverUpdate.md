@@ -30,6 +30,9 @@ The next day one of the service desk techs reaches out, and his driver has still
 Knowing what was happening I could now set out to try and solve the issue. The path to take was pretty clear, write a script that will collect all printers using the old type 3 driver, then remove those printers. Next, I'd need to remove the driver followed by finally re-adding the printers which now use the type 4 driver.
 You can find the PowerShell script ([Remove-PrintDriver.ps1](https://github.com/PeterDodemont/Scripts/tree/main/Misc/Remove-PrintDriver.ps1)) in my [GitHub Scripts repo](https://github.com/PeterDodemont/Scripts/tree/main) under [Misc](https://github.com/PeterDodemont/Scripts/tree/main/Misc). Below is the breakdown of how it works.
 
+**I banged my head against the wall for days figuring out an issue with script throwing "The term 'pnputil' is not recognized as the name of a cmdlet, function, script file, or operable program". This was because by default proactive remediations runs 32-bit PowerShell, all I need to do was set the appropriate option to run 64-bit PowerShell.**
+![64-Bit PowerShell](/assets/img/posts/2021-09-04-PrintDriverUpdate/64bit_powershell.png "64-Bit PowerShell")
+
 The first part is simply setting some variable that will be used for matching the printer and drivers. As well as listing the NetBIOS and FQDN of the print server(s).
 ```powershell
 $CurrentPrinterDriverName = "*HP Color*"
