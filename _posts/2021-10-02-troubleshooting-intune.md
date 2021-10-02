@@ -128,5 +128,5 @@ CMTrace is the log viewer that is included with SCCM. It is a tool not just for 
 The tool is provided with SCCM installs or you can download and install the "System Center 2012 R2 Configuration Manager Toolkit" from [here](https://www.microsoft.com/en-au/download/details.aspx?id=50012).
 Since CMTrace is a self-contained executable, I keep a copy of it in my tools folders for easy access in the future.
 
-I hope you know feel more confident in troubleshooting any issues that arise when deploying items through Intune/MEM.
+I hope you now feel more confident in troubleshooting any issues that arise when deploying items through Intune/MEM.
 As always please feel free to reach out to me with any questions.
