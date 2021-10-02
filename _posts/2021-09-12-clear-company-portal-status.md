@@ -6,7 +6,7 @@ title:  Clearing the status of an Intune/MEM deployed app
 date:   2021-09-12 10:00:00 +1000
 description: How do you clear a downloading or installing status in the company portal.
 img: posts/2021-09-12-clear-company-portal-status/hero.png
-tags: [Intune,CompanyPortal,EndpointManager,MEM]
+tags: [Intune/Endpoint-Manager]
 author: Peter Dodemont
 ---
 If you are reading this, you have probably come across an issue where a Microsoft Endpoint Manager (aka Intune and referred to from now on as MEM) deployed app has gotten stuck in a particular state most commonly downloading or installing. And while there is no way to clear this from the GUI there is a way to clear the status.
