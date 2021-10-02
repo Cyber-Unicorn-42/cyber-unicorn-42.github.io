@@ -11,23 +11,23 @@ author: Peter Dodemont
 ---
 After many years of working with SCCM I have become very comfortable with troubleshooting most issues that arise from anything deployed through SCCM. These days most of the items I deploy are through Intune/MEM. This means I have had to start learning how and where I can do troubleshooting for items deployed through Intune/MEM. I will use this post to catalog where I do all my troubleshooting. I will update this post as I learn more about how and where to troubleshoot deployments through Intune/MEM.
 
-*[Configuration Polices](#config-policies)
-**[Error 404](#conf-pol-404)
-**[Error 864](#conf-pol-864)
-*[Win32 App Deployments](#app-deployments)
-*[Proactive Remediations](#proactive-rem)
-*[Scripting](#scripting)
-*[Company Portal](#company-portal)
-*[Tools](#tools)
-**[CMTrace](#tools-cmtrace)
+* [Configuration Polices](#config-policies)
+ * [Error 404](#conf-pol-404)
+ * [Error 864](#conf-pol-864)
+* [Win32 App Deployments](#app-deployments)
+* [Proactive Remediations](#proactive-rem)
+* [Scripting](#scripting)
+* [Company Portal](#company-portal)
+* [Tools](#tools)
+ * [CMTrace](#tools-cmtrace)
 
 ## <a name=config-policies></a>Configuration Policies
 Troubleshooting configuration policies is done through the event viewer. The main log to look at, is the "Admin" log under "Applications and Services Logs -> Microsoft -> Windows -> Microsoft-Windows-DeviceManagement-Enterprise-Diagnostics-Provider".
 This log contains errors from any configuration policies that you have applied to the device or user. There are a variety of errors, below are the ones I have had to deal with so far.
-* <a name=conf-pol-404></a>Error 404
+* Error 404<a name=conf-pol-404></a>
 ![Config Policy Event Viewer 404 Error](/assets/img/posts/2021-10-02-troubleshooting-intune/config-policies-eventvwr-404.png"Config Policy Event Viewer 404 Error")
 This particular error I just ignore. The error seems to point to the loading of an ADMX file, but the "ADMX file" cannot be found. Every time I have checked, the particular ADMX referenced has been loaded correctly and I have no issues applying settings from that ADMX.
-* <a name=conf-pol-864></a>Error 864
+* Error 864<a name=conf-pol-864></a>
 ![Config Policy Event Viewer 864 Error](/assets/img/posts/2021-10-02-troubleshooting-intune/config-policies-eventvwr-864.png"Config Policy Event Viewer 864 Error")
 This error indicates that a particular setting cannot be found in a custom config policy (this is where you have first loaded a ADMX file and then applied setting from that ADMX through OMA-URI's). In this particular example the "CDPF_DisableConnectedPDT" setting cannot be found in the Foxit Phantom PDF ADMX I loaded.
 
