@@ -21,13 +21,13 @@ After many years of working with SCCM I have become very comfortable with troubl
 * [Tools](#tools)
     * [CMTrace](#tools-cmtrace)
 
-## <a name=config-policies></a>Configuration Policies
+## <a name=configpolicies></a>Configuration Policies
 Troubleshooting configuration policies is done through the event viewer. The main log to look at, is the "Admin" log under "Applications and Services Logs -> Microsoft -> Windows -> Microsoft-Windows-DeviceManagement-Enterprise-Diagnostics-Provider".
 This log contains errors from any configuration policies that you have applied to the device or user. There are a variety of errors, below are the ones I have had to deal with so far.
-* Error 404<a name=conf-pol-404></a>
+* <a name="conf-pol-404"></a>Error 404
 ![Config Policy Event Viewer 404 Error](/assets/img/posts/2021-10-02-troubleshooting-intune/config-policies-eventvwr-404.png"Config Policy Event Viewer 404 Error")
 This particular error I just ignore. The error seems to point to the loading of an ADMX file, but the "ADMX file" cannot be found. Every time I have checked, the particular ADMX referenced has been loaded correctly and I have no issues applying settings from that ADMX.
-* Error 864<a name=conf-pol-864></a>
+* <a name=conf-pol-864></a>Error 864
 ![Config Policy Event Viewer 864 Error](/assets/img/posts/2021-10-02-troubleshooting-intune/config-policies-eventvwr-864.png"Config Policy Event Viewer 864 Error")
 This error indicates that a particular setting cannot be found in a custom config policy (this is where you have first loaded a ADMX file and then applied setting from that ADMX through OMA-URI's). In this particular example the "CDPF_DisableConnectedPDT" setting cannot be found in the Foxit Phantom PDF ADMX I loaded.
 
