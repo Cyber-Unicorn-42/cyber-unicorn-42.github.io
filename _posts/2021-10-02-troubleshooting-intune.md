@@ -49,17 +49,22 @@ Then, a number of steps are performed for each app, namely: detection, applicabi
 ```
 Detection is always performed as the app might have been installed or uninstalled manually prior. Each detection rule defined for the app will be processed in order and if one of them fails the application detection will be marked as failed. Below is an example of a failed detection from an MSI product code.
 ![Failed MSI Detection](/assets/img/posts/2021-10-02-troubleshooting-intune/failed-msi-detection.png "Failed MSI Detection")
+
 On the first line in the screenshot you can see "SideCarProductCodeDetectionManager", this will change depending on what type of detection you have configured.
 After detection, applicability is checked. Applicability refers to the requirements that are available in the interface as per the below screenshot.
 ![Applicability Rules](/assets/img/posts/2021-10-02-troubleshooting-intune/applicability-rules.png "Applicability Rules")
+
 Following applicability, extended requirements are checked. This refers to any additional requirements you configured on the app. See the section highlighted in the screenshot below.
 ![Extended Requirements Rules](/assets/img/posts/2021-10-02-troubleshooting-intune/extended-reqs-rules.png "Extended Requirements Rules")
+
 The next step is to check if the application has already been downloaded. If it hasn't or there is a new version available the download will be started and stored in "C:\Program Files (x86)\Microsoft Intune Management Extension\Content\Incoming" (unless you changed the location of the Program Files (x86)) and the file will be named with the GUID of the app followed by "_x.bin", where "X" is equivalent to the version of the intunewin file of the app.
 Then we have the execution step. Like with the download there is check. In this case the check is to see if installation of that version of the app has been attempted in the last 24 hours already, if it has the app will not attempt another install.
 This section is where most of the errors will occur. The log will show a line showing the install command
 ![Win32 Install Command](/assets/img/posts/2021-10-02-troubleshooting-intune/win32-execute.png "Win32 Install Command")
+
 A few lines later there will be a line with an exit code. In this example the exit code is 1
 ![Win32 Exit Code](/assets/img/posts/2021-10-02-troubleshooting-intune/win32-exitcode.png "Win32 Exit Code")
+
 I have not defined the exit code as failed in the application properties, but if I did it would come up as failed. And with some additional work upfront while writing install scripts you can precisely pinpoint where an error is occurring (see the [scripting](#scripting) section for more info).
 Finally, another detection is performed to confirm that the application was installed correctly.
 
@@ -70,14 +75,18 @@ Proactive remediations log their output to the "IntuneManagementExtension.log" f
 The process for proactive remediations is really simple. First the detection script is run and then the remediation script. Both steps follow the exact same process: the relevant script is executed and the last line from the output is captured and displayed in the log.
 Unlike with Win32 Apps, proactive remediations are only referenced by their GUID in the log. This means first we have to get the GUID.I use the following method for getting the GUID, but you can do whatever works for you. I right click the link of the proactive remediation in the Intune/MEM Portal and copy the URL
 ![Proactive Remediation URL Copy](/assets/img/posts/2021-10-02-troubleshooting-intune/proactive-rem-url-copy.png "Proactive Remediation URL Copy")
+
 And from the URL I can get the GUID. It's located right after the "/ID/"
 ![Proactive Remediation URL GUID](/assets/img/posts/2021-10-02-troubleshooting-intune/proactive-rem-url-copy.png "Proactive Remediation URL GUID")
+
 With the GUID I can now identify the section of the log that is relevant to that specific proactive remediation.
 Proactive remediations only have 2 exit codes they accept 0 for success and 1 for failed. The below example looks for a specific print driver on the system, if the driver is found remediation needs to be run. The detection script exits with an exit code of 1 indicating the driver was found. This can also be seen in the last line outputted by the script as it is captured in the log.
 ![Proactive Remediation Detection Failed](/assets/img/posts/2021-10-02-troubleshooting-intune/proactive-rem-det-fail.png "Proactive Remediation Detection Failed")
+
 The remediation script is run straight after and its log entries are identical. It also shows you the error code as well as the last line on the output before the script exited
 ![Proactive Remediation Remediation Failed](/assets/img/posts/2021-10-02-troubleshooting-intune/proactive-rem-rem-fail.png "Proactive Remediation Remediation Failed")
-Showing the last line of the output gives us the ability to capture the exact error as long as we have proper error handling in the scripts. I cover this in the [scripting](#sripting) section.
+
+Showing the last line of the output gives us the ability to capture the exact error as long as we have proper error handling in the scripts. I cover this in the [scripting](#scripting) section.
 
 To trigger a run of the proactive remediation what you need to do is restart the "Microsoft Intune Management Extension" service. Once the service has been restarted It will check if any new or updated remediations are available and if some are found they are scheduled to be executed 5 minutes after the service was restarted.
 ![Proactive Remediation Scheduler](/assets/img/posts/2021-10-02-troubleshooting-intune/proactive-rem-scheduler.png "Proactive Remediation Scheduler")
@@ -98,6 +107,7 @@ Catch {
 ```
 When put in a script and run it gives the below output
 ![Scripting Error Text](/assets/img/posts/2021-10-02-troubleshooting-intune/scripting-error-text.png "Scripting Error Text")
+
 And upon checking the last exit code, you will notice it is 1
 ![Scripting Error Code](/assets/img/posts/2021-10-02-troubleshooting-intune/scripting-error-code.png "Scripting Error Code")
 
@@ -113,6 +123,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\IntuneManagementExtension
 
 ## <a name="tools"></a>Tools
 * <a name="tools-cmtrace"></a>CMTrace
+
 CMTrace is the log viewer that is included with SCCM. It is a tool not just for looking at the SCCM logs, but also for any logs generated by Intune/MEM. You can find more information about CMTrace [here](https://docs.microsoft.com/en-us/mem/configmgr/core/support/cmtrace).
 The tool is provided with SCCM installs or you can download and install the "System Center 2012 R2 Configuration Manager Toolkit" from [here](https://www.microsoft.com/en-au/download/details.aspx?id=50012).
 Since CMTrace is a self-contained executable, I keep a copy of it in my tools folders for easy access in the future.
