@@ -12,14 +12,14 @@ author: Peter Dodemont
 After many years of working with SCCM I have become very comfortable with troubleshooting most issues that arise from anything deployed through SCCM. These days most of the items I deploy are through Intune/MEM. This means I have had to start learning how and where I can do troubleshooting for items deployed through Intune/MEM. I will use this post to catalog where I do all my troubleshooting. I will update this post as I learn more about how and where to troubleshoot deployments through Intune/MEM.
 
 * [Configuration Polices](#config-policies)
- * [Error 404](#conf-pol-404)
- * [Error 864](#conf-pol-864)
+    * [Error 404](#conf-pol-404)
+    * [Error 864](#conf-pol-864)
 * [Win32 App Deployments](#app-deployments)
 * [Proactive Remediations](#proactive-rem)
 * [Scripting](#scripting)
 * [Company Portal](#company-portal)
 * [Tools](#tools)
- * [CMTrace](#tools-cmtrace)
+    * [CMTrace](#tools-cmtrace)
 
 ## <a name=config-policies></a>Configuration Policies
 Troubleshooting configuration policies is done through the event viewer. The main log to look at, is the "Admin" log under "Applications and Services Logs -> Microsoft -> Windows -> Microsoft-Windows-DeviceManagement-Enterprise-Diagnostics-Provider".
