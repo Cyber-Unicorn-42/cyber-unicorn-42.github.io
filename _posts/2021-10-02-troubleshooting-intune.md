@@ -111,7 +111,7 @@ When put in a script and run it gives the below output
 And upon checking the last exit code, you will notice it is 1
 ![Scripting Error Code](/assets/img/posts/2021-10-02-troubleshooting-intune/scripting-error-code.png "Scripting Error Code")
 
-For Win32 Apps you can specify whatever error number you want. Since the log does not contain any output other than the error number, I suggest you divide the script into sections and provide a unique error code for each section. This way you can easily identify where the error occurred.
+For Win32 Apps you can specify whatever error number you want. Since the log does not contain any output other than the error number, I suggest you divide the script into sections and provide a unique error code for each section. This way you can easily identify where the error occurred. The error code will also be passed to Intune/MEM so you can retrieve it from the installation status. In Intune/MEM it will be in hex and prefixed with "0x8007".
 For proactive remediations the error code must be 0 or 1, 0 indicates success and 1 indicates failure. But since the last line outputted to the console is shown you can provide a custom error message for each section to assist in pinpointing where the error occurred.
 
 ## <a name="company-portal"></a>Company Portal
