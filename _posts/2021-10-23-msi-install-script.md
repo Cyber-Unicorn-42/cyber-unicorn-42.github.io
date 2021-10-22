@@ -3,7 +3,7 @@ layout: post
 read_time: true
 show_date: true
 title:  Script to install MSI files in Intune/MEM
-date:   2021-09-25 10:00:00 +1000
+date:   2021-10-22 10:00:00 +1000
 description: Script for installing MSI applications as Win32 apps in Intune/MEM
 img: posts/2021-10-23-msi-install-script/hero.png
 tags: [Intune/Endpoint-Manager,PowerShell]
