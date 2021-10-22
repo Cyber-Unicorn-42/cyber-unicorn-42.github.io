@@ -3,7 +3,7 @@ layout: post
 read_time: true
 show_date: true
 title:  What is SPF, DKIM and DMARC
-date:   2035-01-01 10:00:00 +1000
+date:   2021-10-16 10:00:00 +1000
 description: A non-technical explanation of what SPF, DKIM and DMARC are.
 img: posts/2021-10-16-SPF-DKIM-DMARC/hero.png
 tags: [non-technical,security,email]
