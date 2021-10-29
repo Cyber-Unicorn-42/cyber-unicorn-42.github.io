@@ -13,7 +13,7 @@ This article serves as an introduction to a series I am writing around what I be
 This article will list (and eventually link to) each of the controls I am writing an article about. It will also include a brief outline of what you can expect to read about in each article.
 (My aim is to release a new article for this series every 2 weeks, so if you are interested in any of the below check back once every 2 weeks to see if there have been any new articles :) the controls are also not listed in any particular order, just in the order I thought of them)
 
-## Operating System Patching (Server and Workstation)
+## Operating System Patching
 This should be pretty obvious to everyone, but there are still numerous reports coming out on compromises that happen because operating systems have not been patched. Having implemented this a several organisations in the last number of years. I will provide what I learned over the years and what has worked to not only patch in a timely manner but also in a way that minimises risk of widespread issues.
 
 ## Restrict Admin Privileges and Zero Trust
@@ -52,3 +52,5 @@ Users are your very last line of defence in most cases. And while we do everythi
 
 ## Risk Management
 While not something you can implement on a device, making sure you do proper risk management is crucial. Not only will it allow you to know where to focus on, it will also assist in providing better justifications for implementing the other controls on this page. Having information about what risk get most attempts of exploitation will allow you to put some hard numbers against the risks and compare the cost of doing nothing with the cost of implementing the appropriate control.
+
+As always, feel free to reach out with any questions or comments.
