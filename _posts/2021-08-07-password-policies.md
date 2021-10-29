@@ -6,7 +6,7 @@ title:  Password Policies For The Current Era
 date:   2021-08-07 11:09:20 +1000
 description: What should password policies look like in this day and age.
 img: posts/2021-08-07-password-policies/hero.jpg
-tags: [Security,Non-Technical]
+tags: [security,non-technical]
 author: Peter Dodemont
 ---
 We all know what a safe and secure password is right? It should have at least 8 characters, contain at least 1 uppercase, 1 lowercase, 1 number and 1 symbol, it should change regularly and you can reuse an arbitrary number of your previous passwords. But does this actually make passwords more secure?

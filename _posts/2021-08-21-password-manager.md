@@ -6,7 +6,7 @@ title:  Managing your passwords
 date:   2021-08-21 10:42:00 +1000
 description: How to manage all your passwords and make them as secure as possible.
 img: posts/2021-08-21-password-manager/hero.png
-tags: [Security,Personal]
+tags: [security,personal]
 author: Peter Dodemont
 ---
 Most of us are having to deal with an ever increasing number of passwords in our lives. And while there are lots of smart people out there working on a passwordless future, it seems unlikely that we will ever truly go passwordless. There are multiple reasons for that, but the main reason is that we need some form of authentication that is 100% reliable. And by that I mean that it is not affected by outside factors (see the [biometrics](#biometrics) section for more details).

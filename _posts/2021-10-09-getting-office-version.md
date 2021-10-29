@@ -6,7 +6,7 @@ title:  Getting Office 365 Client version in Intune/MEM
 date:   2021-10-09 10:00:00 +1000
 description: How to can you get the Office 365 version for all your devices through Intune/MEM.
 img: posts/2021-10-09-getting-office-version/hero.png
-tags: [Intune/Endpoint-Manager,PowerShell]
+tags: [intune/endpoint-manager,powershell]
 author: Peter Dodemont
 published: true
 ---

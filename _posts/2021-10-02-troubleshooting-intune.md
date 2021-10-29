@@ -6,7 +6,7 @@ title:  Troubleshooting Intune/Endpoint Manager on Windows Devices
 date:   2021-10-02 10:00:00 +1000
 description: How can you troubleshoot all the different items you can apply or install on Windows devices through Intune/endpoint manager on the endpoint.
 img: posts/2021-10-02-troubleshooting-intune/hero.png
-tags: [Intune/Endpoint-Manager]
+tags: [intune/endpoint-manager]
 author: Peter Dodemont
 ---
 After many years of working with SCCM I have become very comfortable with troubleshooting most issues that arise from anything deployed through SCCM. These days most of the items I deploy are through Intune/MEM. This means I have had to start learning how and where I can do troubleshooting for items deployed through Intune/MEM. I will use this post to catalog where I do all my troubleshooting. I will update this post as I learn more about how and where to troubleshoot deployments through Intune/MEM.
@@ -15,11 +15,13 @@ After many years of working with SCCM I have become very comfortable with troubl
     * [Error 404](#conf-pol-404)
     * [Error 864](#conf-pol-864)
 * [Win32 App Deployments](#app-deployments)
+    *[PowerShell Note/File Not Found](#powershell-note)
 * [Proactive Remediations](#proactive-rem)
 * [Scripting](#scripting)
 * [Company Portal](#company-portal)
 * [Tools](#tools)
     * [CMTrace](#tools-cmtrace)
+    * [Windows Calculator](#tools-calc)
 
 ## <a name="config-policies"></a>Configuration Policies
 Troubleshooting configuration policies is done through the event viewer. The main log to look at, is the "Admin" log under "Applications and Services Logs -> Microsoft -> Windows -> Microsoft-Windows-DeviceManagement-Enterprise-Diagnostics-Provider".
@@ -69,6 +71,9 @@ I have not defined the exit code as failed in the application properties, but if
 Finally, another detection is performed to confirm that the application was installed correctly.
 
 Available and required applications are updated on a schedule, but you can force an update by doing a sync in the Company Portal app.
+
+* <a name="powershell-note"></a>PowerShell Note / File Not Found
+A quick note about the PowerShell environment used by Win32 apps. The PowerShell environment runs as **32 BIT**. I found this out the long and hard way when trying to run an application that resides in System32 and getting a file not found error. It took me several days to finally figure it out. The error was 100% correct but I was unable to replicate it locally as interactively PowerShell runs in 64 bit.
 
 ## <a name="proactive-rem"></a>Proactive Remediations
 Proactive remediations log their output to the "IntuneManagementExtension.log" file. You can view this log with any log viewer or text editor, personally I use [CMTrace](#tools-cmtrace). The file is located at "C:\ProgramData\Microsoft\IntuneManagementExtension\Logs" (unless you changed the location of ProgramData). Proactive Remediation log entries start with the prefix [HS].
@@ -130,3 +135,7 @@ Since CMTrace is a self-contained executable, I keep a copy of it in my tools fo
 
 I hope you now feel more confident in troubleshooting any issues that arise when deploying items through Intune/MEM.
 As always please feel free to reach out to me with any questions.
+
+* <a name="tools-calc"></a>Windows Calculator
+
+You are probably wondering why I would put the builtin Windows calculator as a tool. This is because you can use it to easily convert the status codes provided in the SCCM logs to the actual error messages. By status codes I'm talking about those that start with "0x8007". Most of the time they are just hex values that can be converted easily. But I have come across the odd occasion where this doesn't work very well or where I need to subtract the "8007" that gets automatically added to each status code. To be able to do the conversion all you need to do is switch the calculator to the "Programmer" mode from the menu.
