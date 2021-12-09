@@ -55,10 +55,15 @@ $ACL | Set-Acl -Path c:\Temp
 All together this will look like the below. As with all my other scripts it's wrapped in a Try-Catch block for error handling. I also generally use variables or parameters so I can easily re-use the script in the future.
 ```powershell
 $ACLPath = "C:\Temp"
+$Identity = "Users"
+$FileSystemRight = "Modify" 
+$Propagation = "0"
+$inheritance = "3"
+$RuleType = "Allow"
 
 Try {
     $ACL = Get-Acl -Path $ACLPath
-    $AccessRule = New-Object System.Security.AccessControl.FileSystemAccessRule("Users","Modify","3","0","Allow")
+    $AccessRule = New-Object System.Security.AccessControl.FileSystemAccessRule($Identity,$FileSystemRight,$inheritance,$Propagation,$RuleType)
     $ACL.SetAccessRule($AccessRule)
     $ACL | Set-Acl -Path $ACLPath
 }
