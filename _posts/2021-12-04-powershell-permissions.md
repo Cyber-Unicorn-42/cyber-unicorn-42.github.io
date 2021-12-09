@@ -16,6 +16,7 @@ Before getting into how to set the permissions I want to give a quick refresher 
 Inheritance indicates if that particular access rule is allowed to be passed on the any child items, and which item types it can be passed onto to. Access rules are just the individual entries that make up the access control list (or ACL). They are also referred to as access control entries (or ACE). PowerShell refers to them as access rules so that is what I'll be using. Inheritance is only available on folders (since files do not have any child items). There are two options for inheritance:
 * Subfolders: Indicates that the access rule can be set on any subfolder
 * Files: Indicates that the access rule can be set on any files
+
 Propagation on the other hand indicates whether or not the access rule applies to the folder it is set on.
 The inheritance and propagation details of the access rule can be found on the advanced properties windows of the item in the GUI.
 ![Inheritance in the GUI](/assets/img/posts/2021-12-04-powershell-permissions/inheritance-propagation-gui.png "Inheritance in the GUI")
