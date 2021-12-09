@@ -19,6 +19,7 @@ Propagation indicates if that particular access rule is allowed to be passed on 
 * This folder : Indicates that the access rule can only apply to the folder it has been set on
 * Subfolders : Indicates that the access rule can be set on any subfolder
 * Files : Indicates that the access rule can be set on any files
+
 These can be combined to control where the access rule will get applied to. The most common is "This folder, subfolders and files" as that allows it to be set on any child item. But it is not uncommon to use just "This folder" if you want a particular permission on a single folder. "Files" is also used frequently if you want to prevent users from changing the folder structure but allowing them to add, remove or modify files.
 The propagation details of the access rule can also be found on the advanced properties windows of the item in the GUI.
 ![Propagation in the GUI](/assets/img/posts/2021-12-04-powershell-permissions/propagation-gui.png "Propagation in the GUI")
@@ -37,6 +38,7 @@ Next, I create a new access rule to be added to the ACL. This is where the propa
 * The inheritance of the access rule. This is an optional property.
 * The propagation of the access rule. This is also an optional property.
 * The type of access rule. This is either Allow or Deny.
+
 You'll notice that the propagation and inheritance properties are numeric values. You can find information on which values to use [here for propagation](https://docs.microsoft.com/en-us/dotnet/api/system.security.accesscontrol.propagationflags?view=windowsdesktop-5.0) and [here for inheritance](https://docs.microsoft.com/en-us/dotnet/api/system.security.accesscontrol.inheritanceflags?view=windowsdesktop-5.0). The values you will find on those pages need to be added together if you want to provide the settings. E.g. if you want to set inheritance to be just for subfolders you set the inheritance property to 1. If you want have inheritance for subfolders and files you set the property to 3 (as I have in my example below).
 Note that if you do not supply a value for both propagation and inheritance they will use 0. This means there is no propagation or inheritance for that access rule.
 ```powershell
