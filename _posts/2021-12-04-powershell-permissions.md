@@ -69,6 +69,7 @@ Catch {
     Exit 421
 }
 ```
+I also have a script in my [GitHub repo](https://github.com/PeterDodemont/Scripts) that uses parameters to pass the required values on the command line. You can find that [here](https://github.com/PeterDodemont/Scripts/blob/main/Misc/Add-FileFolderPermission.ps1).
 
 As always, if you have any questions feel free to reach out.
 
