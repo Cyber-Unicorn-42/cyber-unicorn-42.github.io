@@ -3,7 +3,7 @@ layout: post
 read_time: true
 show_date: true
 title:  Setting file and folder permissions through PowerShell
-date:   2001-12-04 10:00:00 +1000
+date:   2021-12-04 10:00:00 +1000
 description: How to set file and folder permissions using powershell including inheritance and propagation.
 img: posts/2021-12-04-powershell-permissions/hero.png
 tags: [powershell]
