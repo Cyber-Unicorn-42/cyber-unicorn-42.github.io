@@ -16,8 +16,11 @@ This article will list (and eventually link to) each of the controls I am writin
 ## [Operating System Patching](\OS-Patching.html)
 This should be pretty obvious to everyone, but there are still numerous reports coming out on compromises that happen because operating systems have not been patched. Having implemented this a several organisations in the last number of years. I will provide what I learned over the years and what has worked to not only patch in a timely manner but also in a way that minimises risk of widespread issues.
 
-## Restrict Admin Privileges and Zero Trust
-Restricting admin privileges is another obvious one. But it actually reaches beyond just preventing users from installing applications. This should also extend to your IT support team. I will also explore the Zero Trust model and how I believe this can be effectively implemented.
+## [Least Privilege and Just-In-Time Access](\least-privilege-just-in-time.html)
+Restricting privileges is another obvious one, mostly this is applied to not providing administrator access to users, but it actually reaches beyond this. This should also extend to other permissions within the business.
+
+## Zero Trust
+Exploring the Zero Trust model and how you can get started with it.
 
 ## Multi-factor Authentication
 MFA has been on top of the list of items to implement for a number of years. In the past MFA was very intrusive, but these days there are very elegant ways to implement MFA. These not only provide additional security, they can also be implemented in a way that the user will very rarely even know MFA is being employed.
