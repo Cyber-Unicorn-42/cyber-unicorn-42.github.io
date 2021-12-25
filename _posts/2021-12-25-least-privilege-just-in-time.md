@@ -13,17 +13,13 @@ While both Least Privilege and Just-In-Time (JIT) are relatively simple concepts
 
 ## Least Privilege Model
 The thought behind the least privilege model is pretty simple:
-```
-Only provide just enough access for a user to do their job
-```
+### Only provide just enough access for a user to do their job
 And while the concept is simple, implementing this definitely isn't. It usually starts with figuring out what permissions are needed for every role in the business and ensuring that they don't provide more access the needed. This process can be pretty difficult and long, and it is also not a once and done process. It will need to be continuously monitored to make sure there is no new permissions for a role, permissions can be removed from a role, or even if there is a role that needs to be added or removed.
 Then you also need to have regular reviews of each user, to account for permissions that were added in an ad-hoc fashion.
 
 ## Just-In-Time Access
 JIT is an equally straightforward concept:
-```
-Only provide access for the duration that access is required to perform the given task
-```
+### Only provide access for the duration that access is required to perform the given task
 This might be best explained with an example, let's say a user needs to modify a page on the intranet, they should only be given access to modify that page just before they make the change, and it should be taken away again as soon as they are finished.
 The way the process usually works is the user requests the access needed and specifies a time period they need it for (think hours, not days). Then the permission would be approved and if granted it would be applied and then removed again after the requested time period has expired. While it would be possible to do the who process manually, automation is going to be key for this. Going into detail about automation us beyond the scope of this article, but I will be writing an article about automation in the future.
 
@@ -38,25 +34,20 @@ I'll start by listing the questions and then going into more detail on each ques
 * Can this permission lead to compromised users or devices?
 * Can this permission cause reputational damage?
 * How many people could be impacted if this permission was abused?
-```
-Does the user need this permission for their day-to-day activities?
-```
+
+### Does the user need this permission for their day-to-day activities?
 This is usually not a question you can answer yourself, so you will need to ask the user. If you ask them if they need it straight up, they will just answer with yes though. My approach is to ask them how often they perform the task that requires this access. I can get lots of answers to this question, so here are some general insights on the possible answers. If the answer points to a high frequency (think every day, multiple times a week), then I will need to rely heavily on the answers to the other questions. If the frequency is low (think once a month or "just in case"), then almost certainly JIT is going to be the recommendation. Permissions for low frequency tasks are a great example of combining least privilege and JIT as you never know what exploits might be discovered in the future and limiting permissions for every low frequency action protects you from these potentially being exploited.
-```
-Can this permission cause an outage?
-Can this permission lead to compromised users or devices?
-Can this permission cause reputational damage?
-Can this permission cause data loss?
-```
+### Can this permission cause an outage?
+### Can this permission lead to compromised users or devices?
+### Can this permission cause reputational damage?
+### Can this permission cause data loss?
 I'll group these 3 questions together as they can generally all be answered by gathering the same information, namely the exact details of what actions will be possible if this permission is given. This can be quite clear from the permission name or description, or completely opaque if you have no knowledge of the application in question. The key task here is to gather as much detail about the permission as possible, and then evaluate the information against each question. Some examples of permissions that would cause you to answer yes to these questions:
 Granting a user the ability to update an internal application - This could cause an outage on that application if there is a bug or an incorrect procedure is followed.
 Granting a user the ability to bypass content filters - This could cause user compromise by them visiting a phishing website.
 Granting the ability to sent bulk email to external people - This could cause reputational damage as once an email has been sent externally it cannot be recalled.
 Granting the ability to upload documents - This could cause someone to upload valuable IP to an external service so they can retrieve it from a personal device.
 If the answer to any of these questions is yes, then JIT should almost always be applied, even if this is an action the user does frequently. Since the potential impact is significant, we should limit any possible abuse if the account were compromised in the future.
-```
-How many people could be impacted if this permission was abused?
-```
+### How many people could be impacted if this permission was abused?
 With this question I try to determine what the impact would be if anyone were to abuse the permission. The answer to this question should flow naturally from the information gathered to answer previous questions. This can be from a single person not being able to access a file or folder, to the entire company not being able to log in because the password of every AD account has been reset.
 I don't have a fixed number I use to determine when to use JIT. It will largely be based on the actual impact to the business as a whole rather than just a raw number. For example, causing an outage on the training platform isn't going to have the same impact as an email outage. Both outages affect the entire business, but the business can function perfectly fine for a few days without the training platform, but not without emails.
 
