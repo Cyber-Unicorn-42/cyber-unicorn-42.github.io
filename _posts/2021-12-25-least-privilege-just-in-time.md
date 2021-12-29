@@ -2,14 +2,14 @@
 layout: post
 read_time: true
 show_date: true
-title:  Least Privilege and Just-In-Time.
+title:  Least Privilege and Just-In-Time Access
 date:   2021-12-25 10:00:00 +1000
 description: What are least privilege and Just-In-Time and some tips on getting started with them.
 img: posts/2021-12-25-least-privilege-just-in-time/hero.jpg
 tags: [security,non-technical]
 author: Peter Dodemont
 ---
-While both Least Privilege and Just-In-Time (JIT) are relatively simple concepts to explain, implementing them successfully is not quite as easy. The road to fully implementing both across an entire business is generally quite long. Luckily you don't need to implement everything in one go, you can start small and build upon it over time.
+While both Least Privilege and Just-In-Time Access(JIT) are relatively simple concepts to explain, implementing them successfully is not quite as easy. The road to fully implementing both across an entire business is generally quite long. Luckily you don't need to implement everything in one go, you can start small and build upon it over time.
 
 ## Least Privilege Model
 The thought behind the least privilege model is pretty simple:
