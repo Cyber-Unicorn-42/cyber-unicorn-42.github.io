@@ -8,7 +8,6 @@ description: Script for installing MSI applications as Win32 apps in Intune/MEM
 img: posts/2021-10-23-msi-install-script/hero.png
 tags: [intune/endpoint-manager,powershell]
 author: Peter Dodemont
-published: true
 ---
 This is going to be a brief post about the script I use to install MSI packages as Win32 apps in Intune/MEM. You might be wondering why I would not just install them as line of business apps in Intune/MEM as that takes care of a number of items by itself. The reason is that there are a number of key things you can't do with the line of business apps (e.g. dependencies). I will cover these off in greater detail in a future post.
 
@@ -85,4 +84,4 @@ Catch {
 
 Each section is included in it's on try-catch block and generates a unique error code that can be retrieved from Intune/MEM to assist in troubleshooting even if the transcript is not enabled.
 
-As usual, if you have any questions or comments, please reach out.
+As usual, if you have any questions or comments, feel free to reach out.
