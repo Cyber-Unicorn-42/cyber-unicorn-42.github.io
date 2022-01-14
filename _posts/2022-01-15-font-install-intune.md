@@ -8,6 +8,7 @@ description: Script for installing fonts in Intune/MEM
 img: posts/2022-01-15-font-install-intune/hero.png
 tags: [intune/endpoint-manager,powershell]
 author: Peter Dodemont
+Published: true
 ---
 Every once in a while I get asked to install some new fonts on all devices. Doing it locally on devices is pretty easy, copy them to the fonts folder and you're done. Doing it via Intune/MEM, you need to manually add a registry entry for each font you want to install.
 
