@@ -17,9 +17,9 @@ As in most of my scripts the fonts to install get passed to the script via a par
 ```powershell
 Param
 (
-[Parameter(Mandatory=$true)]
-[string[]]
-$Fonts
+[Parameter(Mandatory=$false)]
+[String]
+$Fonts=@()
 )
 ```
 
