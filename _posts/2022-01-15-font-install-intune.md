@@ -22,15 +22,18 @@ Param
 $Fonts=@()
 )
 ```
+
 Because the parameter can accept multiple fonts I need to run the following steps through a foreach loop, so that each step happens for each font.
 ```powershell
 ForEach ($Font in $Fonts){
 ```
+
 The first step is to copy the font to the fonts folder in the windows install directory. Using the Windir environment variable ensures that the script works, even if the windows directory is not in the default location of C:\Windows.
 ```powershell
 # Copy font to fonts directory
 Copy-Item -Path $Font -Destination $Env:Windir\Fonts -Force
 ```
+
 Next, I split the filename into the name and the extension and save each in a variable for use later in the script.
 ```powershell
 # Get font name and type
@@ -38,6 +41,7 @@ $FontSplit = $Font.split(".")
 $FontName = $FontSplit[0]
 $FontType = $FontSplit[1]
 ```
+
 After splitting the filename, I use the variable with the extension to determine if the font is a TrueType or an OpenType font, and save a specific string in a variable to use when creating the registry entry. I use a switch statement as it can only ever be one of the two. This way if it matches on the first case it will not process the rest of the switch statement.
 ```powershell
 # Set value for the font type in the registry
@@ -52,15 +56,18 @@ Switch ($FontType) {
     }
 }
 ```
+
 The final step is to create the registry entry using the variables created earlier in the script.
 ```powershell
 # Create registry entry for the font
 New-ItemProperty -Value "$Font" -Path "HKLM:\Software\Microsoft\Windows NT\CurrentVersion\Fonts" -PropertyType string -Name "$FontName $FontTypeName" -Force > $null
 ```
+
 And off course I need to close off teh foreach loop.
 ```powershell
-    }
+}
 ```
+
 These are all the steps you will need to create your own script to install fonts in Intune/MEM. If you look at the script in my GitHub repo, you'll notice that as with most of my other scripts it includes a transcript option as well.
 There are still improvements that can be made to the script (e.g. validating the variable only contains filenames with valid extensions). Maybe one day I'll find I'll need them, but for now I will leave it as is, since the script works very reliably.
 
