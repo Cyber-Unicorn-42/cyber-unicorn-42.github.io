@@ -8,7 +8,6 @@ description: Script for installing fonts in Intune/MEM
 img: posts/2022-01-15-font-install-intune/hero.png
 tags: [intune/endpoint-manager,powershell]
 author: Peter Dodemont
-render_with_liquid: false
 ---
 Every once in a while I get asked to install some new fonts on all devices. Doing it locally on devices is pretty easy, copy them to the fonts folder and you're done. Doing it via Intune/MEM, you need to manually add a registry entry for each font you want to install.
 
@@ -22,11 +21,6 @@ Param
 [string[]]
 $Fonts=@()
 )
-```
-
-Because the parameter can accept multiple fonts I need to run the following steps through a foreach loop, so that each step happens for each font.
-```powershell
-ForEach ($Font in $Fonts){
 ```
 
 The first step is to copy the font to the fonts folder in the windows install directory. Using the Windir environment variable ensures that the script works, even if the windows directory is not in the default location of C:\Windows.
@@ -64,8 +58,17 @@ The final step is to create the registry entry using the variables created earli
 New-ItemProperty -Value "$Font" -Path "HKLM:\Software\Microsoft\Windows NT\CurrentVersion\Fonts" -PropertyType string -Name "$FontName $FontTypeName" -Force > $null
 ```
 
-And off course I need to close off teh foreach loop.
+Because the parameter can accept multiple fonts I need to run the steps through a foreach loop, so that each step happens for each font specified.
 ```powershell
+ForEach ($Font in $Fonts) {
+# Copy font to fonts directory
+...
+# Get font name and type
+...
+# Set value for the font type in the registry
+...
+# Create registry entry for the font
+...
 }
 ```
 
