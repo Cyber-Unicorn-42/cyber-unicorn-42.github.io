@@ -469,10 +469,10 @@ pre code {
   padding-right: 0;
   padding-left: 0;
 }
-code {
+/*code {
   font-family: monospace;
   font-size: 0.75rem;
-}
+}*/
 svg {
     vertical-align: middle;
 }
