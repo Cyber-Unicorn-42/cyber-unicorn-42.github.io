@@ -18,8 +18,7 @@ As in most of my scripts the fonts to install get passed to the script via a par
 Param
 (
 [Parameter(Mandatory=$false)]
-[String]
-$Fonts=@()
+[String[]]
 )
 ```
 
