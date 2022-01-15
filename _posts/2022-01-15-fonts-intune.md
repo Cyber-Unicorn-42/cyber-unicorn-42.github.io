@@ -13,8 +13,9 @@ Every once in a while I get asked to install some new fonts on all devices. Doin
 
 ## The Script
 As usual the script can be found in my Github Repo [here](https://github.com/PeterDodemont/Scripts/tree/main/Install-Scripts).
-As in most of my scripts the fonts to install get passed to the script via a parameter. The parameter is an array that will accept multiple filenames.
+As most of my scripts, I try to make this one easily re-usable as well. I do this by using a parameter for the font file names. The parameter is also declared as an array, this way it will accept multiple filenames.
 
+Here is the way the parameter is defined at the start of the script.
 ```powershell
 Param
 (
