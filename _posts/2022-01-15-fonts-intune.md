@@ -14,21 +14,13 @@ Every once in a while I get asked to install some new fonts on all devices. Doin
 ## The Script
 As usual the script can be found in my Github Repo [here](https://github.com/PeterDodemont/Scripts/tree/main/Install-Scripts).
 As in most of my scripts the fonts to install get passed to the script via a parameter. The parameter is an array that will accept multiple filenames.
+
 ```powershell
 Param
 (
-[Parameter(Mandatory=$false)]
-[String]
-$TranscriptPath
-,
 [Parameter(Mandatory=$true)]
-[ValidateScript({If($_ -NotLike "*.msi"){$true}Else{Throw "The MSI filename should not include the extension."}})]
-[String]
-$MSIFilename
-,
-[Parameter(Mandatory=$false)]
-[String]
-$MSIProperties
+[string[]]
+$Fonts=@()
 )
 ```
 
