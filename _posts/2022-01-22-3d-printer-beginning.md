@@ -41,7 +41,7 @@ This is the point where I firmly realized that 3D printing is not yet ready for 
 I won't go into detail about the installation process of the BLTouch as it is specific to each printer, and there are some really good resources out there already, like [this video](https://www.youtube.com/watch?v=cHstALf8Feo) from the Teaching Tech Youtube channel that I used for the model of printer I have.
 I also will not go into detail on the custom firmware as again this is something that will depend on your printer. The one I use is called ADVi3++ which you can find on [GitHub](https://github.com/andrivet/ADVi3pp) or [Patreon](https://www.patreon.com/bePatron?u=6504486) depending on if you are comfortable with building it yourself from source or not. ADVi3++ also has guides available for the installation of the firmware and the BLTouch. Some are free, but for some you will need to become a Patreon to get access.
 Below is a video of the BLtouch in action on my printer.
-{% include youtubePlayer.html id="dtoItuBnqmw" %}
+{% include youtubeplayer.html id="dtoItuBnqmw" %}
 
 This is where I will finish up this article on my first steps into the world of 3D printing. There are more articles to come with lessons I have learned since I took these first steps and further upgrades I have added.
 As always if you have any questions or comments, please feel free to reach out.
