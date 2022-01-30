@@ -5,7 +5,7 @@ show_date: true
 title:  Improving 3D print quality
 date:   2022-01-29 10:00:00 +1000
 description: What have a learned from the first 9 months of owning a 3D printer
-img: posts/2022-01-29-3d-printer-first-year-lessons/hero.png
+img: posts/2022-01-29-3d-printer-first-year-lessons/hero.jpg
 tags: [3dprinting,personal]
 author: Peter Dodemont
 ---
