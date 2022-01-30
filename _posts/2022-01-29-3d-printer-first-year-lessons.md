@@ -41,12 +41,12 @@ Stock
 ![Stock Overhang](/assets/img/posts/2022-01-29-3d-printer-first-year-lessons/stock-overhang.jpg "Stock Overhang")
 CiiCooler
 ![CiiCooler Overhang](/assets/img/posts/2022-01-29-3d-printer-first-year-lessons/ciicooler-overhang.jpg "CiiCooler Overhang")
-Then, we have a picture of bridge (as in the arch on the door of a Benchy). This has some pretty rough edges to it when printed with the stock cooler, but with the CiiCooler it is a significantly smoother, with only very minor imperfections.
+Then, we have a picture of a bridge (as in the arch on the door of a Benchy). This has some pretty rough edges to it when printed with the stock cooler, but with the CiiCooler it's significantly smoother, with only very minor imperfections.
 Stock
 ![Stock Bridge](/assets/img/posts/2022-01-29-3d-printer-first-year-lessons/stock-bridge.jpg "Stock Bridge")
 CiiCooler
 ![CiiCooler Bridge](/assets/img/posts/2022-01-29-3d-printer-first-year-lessons/ciicooler-bridge.jpg "CiiCooler Bridge")
-Finally, we have a more extreme bridge in the form of the ceiling of the inside of the Benchy. While it is hard to see, there is quite a bit of drooping on the stock cooler. But again, with the CiiCooler it looks very clean with minimal if any drooping.
+Finally, we have a more extreme bridge, in the form of the ceiling on the inside of the Benchy. While it is hard to see, there is quite a bit of drooping on the stock cooler. With the CiiCooler, it again looks very clean with minimal if any drooping.
 Stock
 ![Stock Ceiling](/assets/img/posts/2022-01-29-3d-printer-first-year-lessons/stock-ceiling.jpg "Stock Ceiling")
 CiiCooler
