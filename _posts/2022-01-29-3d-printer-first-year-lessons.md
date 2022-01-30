@@ -90,5 +90,5 @@ Benchy at 0.2mm
 ![0.2mm Layer Height Benchy](/assets/img/posts/2022-01-29-3d-printer-first-year-lessons/0.2mm-benchy.jpg "0.2mm Layer Height Benchy")
 
 That about covers what I have learned in my time using my 3D printer so far. As always if you have any question or comments, feel free to reach out.
-I'll leave you with my favorite printed item to date. A 700% scale LEGO minifig (I included a regular minifig and a banana for scale).
+I'll leave you with my favorite printed item to date. A 700% scale LEGO minifig. Or would that be a maxifig now?
 ![Maxifig](/assets/img/posts/2022-01-29-3d-printer-first-year-lessons/minifig.jpg "Maxifig")
