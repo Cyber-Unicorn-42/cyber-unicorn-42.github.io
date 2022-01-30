@@ -2139,7 +2139,5 @@ a.read-more:hover {
 
 #youtube {
   display: block;
-  position: relative;
-  max-width: 100%;
-  align-content: center;
+  margin: auto;
 }
