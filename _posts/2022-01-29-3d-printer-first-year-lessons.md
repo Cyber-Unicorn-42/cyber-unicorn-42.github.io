@@ -2,9 +2,9 @@
 layout: post
 read_time: true
 show_date: true
-title:  Lessons learned from almost a year of 3D printing
+title:  Improving 3D print quality
 date:   2022-01-29 10:00:00 +1000
-description: What have a learned from almost a year of 3D printing
+description: What have a learned from the first 9 months of owning a 3D printer
 img: posts/2022-01-29-3d-printer-first-year-lessons/hero.png
 tags: [3dprinting,personal]
 author: Peter Dodemont
