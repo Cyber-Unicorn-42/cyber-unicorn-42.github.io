@@ -22,7 +22,7 @@ Restricting privileges is another obvious one, mostly this is applied to not pro
 ## Zero Trust
 Exploring the Zero Trust model and how you can get started with it.
 
-## Multi-factor Authentication
+## [Multi-factor Authentication](\mfa.html)
 MFA has been on top of the list of items to implement for a number of years. In the past MFA was very intrusive, but these days there are very elegant ways to implement MFA. These not only provide additional security, they can also be implemented in a way that the user will very rarely even know MFA is being employed.
 
 ## Email Filtering
