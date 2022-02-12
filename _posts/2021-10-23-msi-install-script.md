@@ -82,6 +82,6 @@ Catch {
 }
 ```
 
-Each section is included in it's on try-catch block and generates a unique error code that can be retrieved from Intune/MEM to assist in troubleshooting even if the transcript is not enabled.
+Each section is included in it's own try-catch block and generates a unique error code that can be retrieved from Intune/MEM to assist in troubleshooting even if the transcript is not enabled.
 
 As usual, if you have any questions or comments, feel free to reach out.
