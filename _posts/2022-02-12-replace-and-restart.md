@@ -50,7 +50,7 @@ After the parameters I check if the transcript path has been passed and if it ha
 # Start transcript when Transcript parameter is passed.
 Try {
     If ($TranscriptPath){
-        Start-Transcript -Path "$TranscriptPath\CitrixInstall.log" -Force
+        Start-Transcript -Path "$TranscriptPath\ReplaceAndRestart.log" -Force
     }
 }
 Catch {
