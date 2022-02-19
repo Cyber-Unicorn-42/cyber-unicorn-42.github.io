@@ -25,7 +25,7 @@ Exploring the Zero Trust model and how you can get started with it.
 ## [Multi-factor Authentication](\mfa.html)
 MFA has been on top of the list of items to implement for a number of years. In the past MFA was very intrusive, but these days there are very elegant ways to implement MFA. These not only provide additional security, they can also be implemented in a way that the user will very rarely even know MFA is being employed.
 
-## Email Filtering
+## [Email Filtering](\email-filtering.html)
 Email filtering forms part of the first line of defence against a lot of threats. Good email filtering not only provides additional security, but it also increases productivity as users will no longer lose time by reading SPAM email. A single email might not take 1 person long to action, but multiple emails a day over an entire organisation costs a lot of productivity.
 
 ## Endpoint Protection
