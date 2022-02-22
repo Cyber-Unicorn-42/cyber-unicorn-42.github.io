@@ -3,7 +3,7 @@ layout: post
 read_time: true
 show_date: true
 title:  Troubleshooting Intune/Endpoint Manager on Windows Devices
-date:   2021-10-02 10:00:00 +1000
+date:   2022-02-23 10:00:00 +1000
 description: How can you troubleshoot all the different items you can apply or install on Windows devices through Intune/endpoint manager on the endpoint.
 img: posts/2021-10-02-troubleshooting-intune/hero.png
 tags: [intune/endpoint-manager]
@@ -19,6 +19,7 @@ After many years of working with SCCM I have become very comfortable with troubl
 * [Proactive Remediations](#proactive-rem)
 * [Scripting](#scripting)
 * [Company Portal](#company-portal)
+* [Windows Information Protection](#wip)
 * [Tools](#tools)
     * [CMTrace](#tools-cmtrace)
     * [Windows Calculator](#tools-calc)
@@ -125,6 +126,11 @@ The main point from that article is that the company portal retrieves its inform
 ```
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\IntuneManagementExtension
 ```
+
+## <a name="wip"></a>Windows Information Protection
+If you are using windows information protection you will almost certainly come to a point where you will want to force and sync and confirm that the policy has applied. You can force the sync of the policies by opening the Windows Settings app and going to Accounts -> Access work or school -> Click on "Connected to *yourdomain*" -> Info -> Sync.
+Once you have done that and it completes, you can go to "C:\Windows\System32\AppLocker\MDM\ _RandomNumber_\ _GUID_\AppLocker\EnterpriseDataProtection" (where _RandomNumber_ and _GUID_ are unique to your device and environment).
+Depending on your configuration you will see up to 4 folders: 1 for allowed desktop apps, 1 for exempt desktop apps, 1 for allowed store apps and 1 for exempt store apps. Each will contain yet another folder, and once you open this folder you will see a file called "Policy" open this file with a text editor and it will contain the details of the configuration, matching what you entered in Intune.
 
 ## <a name="tools"></a>Tools
 * <a name="tools-cmtrace"></a>CMTrace
