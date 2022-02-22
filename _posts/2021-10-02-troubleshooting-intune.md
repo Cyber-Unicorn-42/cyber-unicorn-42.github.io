@@ -3,7 +3,7 @@ layout: post
 read_time: true
 show_date: true
 title:  Troubleshooting Intune/Endpoint Manager on Windows Devices
-date:   2022-02-23 10:00:00 +1000
+date:   2022-02-22 10:00:00 +1000
 description: How can you troubleshoot all the different items you can apply or install on Windows devices through Intune/endpoint manager on the endpoint.
 img: posts/2021-10-02-troubleshooting-intune/hero.png
 tags: [intune/endpoint-manager]
