@@ -3,7 +3,7 @@ layout: post
 read_time: true
 show_date: true
 title:  Setting and checking registry values with MEM proactive remediations
-date:   2022-02-26 10:00:01 +1000
+date:   2022-02-26 10:00:00 +1100
 description: How to set and check registry values for both the current user and the local machine using Microsoft Endpoint Manager proactive remediations.
 img: posts/2022-02-26-set-reg-value-intune/hero.png
 tags: [intune/endpoint-manager,powershell]
