@@ -2,7 +2,7 @@
 layout: post
 read_time: true
 show_date: true
-title:  Email Filtering Do's and Don'ts 
+title:  Email filtering do's and don'ts 
 date:   2022-02-19 10:00:00 +1000
 description: My tips on what to do and what not to do when you are looking to do email filtering.
 img: posts/2022-02-19-email-filtering/hero.jpg
