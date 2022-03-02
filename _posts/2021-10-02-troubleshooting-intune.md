@@ -74,6 +74,7 @@ Finally, another detection is performed to confirm that the application was inst
 Available and required applications are updated on a schedule, but you can force an update by doing a sync in the Company Portal app.
 
 * <a name="powershell-note"></a>PowerShell Note / File Not Found
+
 A quick note about the PowerShell environment used by Win32 apps. The PowerShell environment runs as **32 BIT**. I found this out the long and hard way when trying to run an application that resides in System32 and getting a file not found error. It took me several days to finally figure it out. The error was 100% correct but I was unable to replicate it locally as interactively PowerShell runs in 64 bit.
 
 ## <a name="proactive-rem"></a>Proactive Remediations
