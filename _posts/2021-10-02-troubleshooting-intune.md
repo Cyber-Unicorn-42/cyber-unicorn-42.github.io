@@ -15,7 +15,7 @@ After many years of working with SCCM I have become very comfortable with troubl
     * [Error 404](#conf-pol-404)
     * [Error 864](#conf-pol-864)
 * [Win32 App Deployments](#app-deployments)
-    *[PowerShell Note/File Not Found](#powershell-note)
+    * [PowerShell Note/File Not Found](#powershell-note)
 * [Proactive Remediations](#proactive-rem)
 * [Scripting](#scripting)
 * [Company Portal](#company-portal)
