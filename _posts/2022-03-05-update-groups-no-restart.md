@@ -2,9 +2,9 @@
 layout: post
 read_time: true
 show_date: true
-title:  Updating Group Membership Without Restart or Logoff
+title:  Updating AD Group Membership Without Restart or Logoff
 date:   2022-03-05 10:00:00 +1100
-description: How can you update someone's group membership without restarting or logging off.
+description: How can you update a user's or device's AD group membership without restarting or logging off.
 img: posts/2022-03-05-update-groups-no-restart/hero.png
 tags: [intune/endpoint-manager]
 author: Peter Dodemont
@@ -20,7 +20,7 @@ While previously we could just follow the same process for both users and device
 
 The process is really straight forward and only has 2 steps.
 First, you need to open a command prompt as the user and run the below command.
-```Batchfile
+```
 klist purge
 ```
 This command deletes your Kerberos ticket.
@@ -28,7 +28,7 @@ To get a new ticket all you need to do is connect to a network resource, this ca
 That is all that is required.
 
 If you want to confirm that this worked, you can use the below command before and after and check the value of "StartTime" has changed.
-```BatchFile
+```
 klist tgt
 ```
 ![Kerberos Ticket Starttime](/assets/img/posts/2022-03-05-update-groups-no-restart/kerb-ticket.png "Kerberos Ticket Starttime")
@@ -37,17 +37,17 @@ klist tgt
 
 The process for doing it for a computer is also only 2 steps.
 First, run the below command from an elevated command prompt.
-```batchfile
+```
 klist -li 0x3e7 purge
 ```
 Similar to the command for the user this clears the Kerberos ticket, but this time for the device. The local device will always have 0x3e7 as the LogonId (the LogonId for the user changes, but since the purge command runs under the current user context by default, we don't need to specify one with the user command).
 Once you have cleared the ticket all you need to do is run a gpupdate by running.
-```Batchfile
+```
 gpupdate /force
 ```
 
 Just with the user you can also confirm this worked by comparing the start time of the Kerberos ticket by running the below command before and after.
-```Batchfile
+```
 klist -li 0x3e7 tgt
 ```
 ![Device Kerberos Ticket Starttime](/assets/img/posts/2022-03-05-update-groups-no-restart/kerb-ticket-device.png "Device Kerberos Ticket Starttime")
