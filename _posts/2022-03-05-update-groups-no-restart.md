@@ -3,7 +3,7 @@ layout: post
 read_time: true
 show_date: true
 title:  Updating Group Membership Without Restart or Logoff
-date:   2022-03-25 10:00:00 +1100
+date:   2022-03-05 10:00:00 +1100
 description: How can you update someone's group membership without restarting or logging off.
 img: posts/2022-03-05-update-groups-no-restart/hero.png
 tags: [intune/endpoint-manager]
