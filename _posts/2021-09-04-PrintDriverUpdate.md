@@ -262,7 +262,7 @@ Catch {
 
 ## Deployment using Intune Proactive Remediations
 If you are not familiar with Intune Proactive Remediations have a look [here](https://docs.microsoft.com/en-us/mem/analytics/proactive-remediations). Basically, it allows you to specify a state you want to achieve and if that state isn't met it will run a script to remediate.
-To leverage this feature, I wrote a little script that will check if a particular driver is installed and if it is, the remediation will kick in. This script([ProactiveRem-Driver-Detection.ps1](https://github.com/PeterDodemont/Scripts/tree/main/Intune/ProactiveRem-Driver-Detection.ps1)) can also be found in my [GitHub Scripts repo](https://github.com/PeterDodemont/Scripts/tree/main) under [Intune](https://github.com/PeterDodemont/Scripts/tree/main/Intune).
+To leverage this feature, I wrote a little script that will check if a particular driver is installed and if it is, the remediation will kick in. [This script](https://github.com/PeterDodemont/Scripts/tree/main/Intune/ProactiveRem-Driver-Detection.ps1) can also be found in my [GitHub Scripts repo](https://github.com/PeterDodemont/Scripts/tree/main) under [Intune](https://github.com/PeterDodemont/Scripts/tree/main/Intune).
 The script is fairly simple. You set a variable for the driver matching and it provides the required exit code depending on if the driver was found or not.
 ```powershell
 $DriverStoreInfName= "*hprub32a_x64.inf"
