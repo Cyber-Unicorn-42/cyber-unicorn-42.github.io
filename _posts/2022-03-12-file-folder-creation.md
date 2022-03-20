@@ -2,7 +2,7 @@
 layout: post
 read_time: true
 show_date: true
-title:  Creating and detection files or folders using proactive remediations in MEM
+title:  Creating and detecting files or folders using proactive remediations in MEM
 date:   2022-03-11 10:00:00 +1000
 description: A little script I wrote to create and detect files or folders using proactive remediation in MEM.
 img: posts/2022-03-12-file-folder-creation/hero.png
