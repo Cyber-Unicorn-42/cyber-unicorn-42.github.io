@@ -28,7 +28,7 @@ MFA has been on top of the list of items to implement for a number of years. In 
 ## [Email Filtering](\email-filtering.html)
 Email filtering forms part of the first line of defence against a lot of threats. Good email filtering not only provides additional security, but it also increases productivity as users will no longer lose time by reading SPAM email. A single email might not take 1 person long to action, but multiple emails a day over an entire organisation costs a lot of productivity.
 
-## Endpoint Protection
+## [Endpoint Protection](\endpoint-protection.html)
 With treat actors constantly evolving their tactics, good endpoint protection is essential. This not only covers antivirus software, but also anti malware, user behaviour and other items. I'll explore what I have done in the past and what I think is essential to do in the current day and age.
 
 ## Automation
@@ -37,8 +37,8 @@ This actually goes hand in hand with the Zero Trust model. Because by building a
 ## Backups
 Even if you implement all of the controls here, there is always a risk things can go wrong. A good backup solution will be essential in that situation so that you can recover quickly and effectively. With backup solution I am not really talking about any specific software, but rather about everything that encompasses backups be that retention polices, storage policies, testing procedure ... .
 
-## Application Whitelisting
-Application whitelist will stop the majority of malicious actors out there in their tracks. Sure there is groups out there who are able to leverage legitimate and built-in tools, but these are highly advanced actors. I will go through how I believe you can implement whitelisting in way that I believe balances usability and manageability with security.
+## Application Allow Listing
+Application allow listing will stop the majority of malicious actors out there in their tracks. Sure there is groups out there who are able to leverage legitimate and built-in tools, but these are highly advanced actors. I will go through how I believe you can implement allow listing in way that I believe balances usability and manageability with security.
 
 ## Application Patching
 Like operating systems, application also need to be patched on a regular basis. This is a lot harder to do than operating systems, but there are some things we can do to minimise the risks and keep our applications as up to date as possible.
