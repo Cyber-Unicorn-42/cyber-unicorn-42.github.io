@@ -28,10 +28,11 @@ Let's take the [classic](https://xkcd.com/936/) "correct horse battery staple". 
 * Replace the e's with 3's
 * Replace the a's with 4's
 
+(My guess is you probably thought about those exact rules.)
 As you can see, we are not as clever as we think we are. We all have the same ideas. Malicious actors are well aware of these substitutions and as such will also do the same substitutions when attempting to guess passwords.
 
 ### Passwords should be changed regularly
-Just with the complexity rule, password expiry has been proven over and over to not work. Most people will simply add a number to the end or beginning of their password and then just adjust the number when it comes time to change your password. And again there are a few very common strategies people use:
+Just as with the complexity rule, password expiry has been proven over and over to not work. Most people will simply add a number to the end or beginning of their password and then just adjust the number when it comes time to change your password. And again there are a few very common strategies people use:
 * Increment the number by 1
 * Use the number of the month
 * Use the number of the month plus the year (either 2 or 4 digits)
