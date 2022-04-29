@@ -32,7 +32,7 @@ Email filtering forms part of the first line of defence against a lot of threats
 With treat actors constantly evolving their tactics, good endpoint protection is essential. This not only covers antivirus software, but also anti malware, user behaviour and other items. I'll explore what I have done in the past and what I think is essential to do in the current day and age.
 
 ## Automation
-This actually goes hand in hand with the Zero Trust model. Because by building automation you can remove the need for user accounts to have access to a lot of things. And security is only really a secondary benefit, the biggest benefit is increased productivity by not having to do boring and repetitive tasks. I will cover off how I decide when to automate and when to stop automating.
+This actually goes hand in hand with the Zero Trust model. Because by building automation you can remove the need for user accounts to have access to a lot of things. Notonly do you get improved security by automating, you also get increased productivity as you don't need to do boring and repetitive tasks, freeing up your valuable time to do something else. I will cover off how I decide when to automate and when to stop automating.
 
 ## Backups
 Even if you implement all of the controls here, there is always a risk things can go wrong. A good backup solution will be essential in that situation so that you can recover quickly and effectively. With backup solution I am not really talking about any specific software, but rather about everything that encompasses backups be that retention polices, storage policies, testing procedure ... .
