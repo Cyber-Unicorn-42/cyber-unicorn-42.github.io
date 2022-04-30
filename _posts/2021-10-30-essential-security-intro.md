@@ -26,13 +26,13 @@ Exploring the Zero Trust model and how you can get started with it.
 MFA has been on top of the list of items to implement for a number of years. In the past MFA was very intrusive, but these days there are very elegant ways to implement MFA. These not only provide additional security, they can also be implemented in a way that the user will very rarely even know MFA is being employed.
 
 ## [Email Filtering](\email-filtering.html)
-Email filtering forms part of the first line of defence against a lot of threats. Good email filtering not only provides additional security, but it also increases productivity as users will no longer lose time by reading SPAM email. A single email might not take 1 person long to action, but multiple emails a day over an entire organisation costs a lot of productivity.
+Email filtering forms part of the first line of defense against a lot of threats. Good email filtering not only provides additional security, but it also increases productivity as users will no longer lose time by reading SPAM email. A single email might not take 1 person long to action, but multiple emails a day over an entire organisation costs a lot of productivity.
 
 ## [Endpoint Protection](\endpoint-protection.html)
 With treat actors constantly evolving their tactics, good endpoint protection is essential. This not only covers antivirus software, but also anti malware, user behaviour and other items. I'll explore what I have done in the past and what I think is essential to do in the current day and age.
 
-## Automation
-This actually goes hand in hand with the Zero Trust model. Because by building automation you can remove the need for user accounts to have access to a lot of things. Notonly do you get improved security by automating, you also get increased productivity as you don't need to do boring and repetitive tasks, freeing up your valuable time to do something else. I will cover off how I decide when to automate and when to stop automating.
+## [Automation](\automation.html)
+This actually goes hand in hand with the Zero Trust model. Because by building automation you can remove the need for user accounts to have access to a lot of things. Not only do you get improved security by automating, you also get increased productivity as you don't need to do boring and repetitive tasks, freeing up your valuable time to do something else. I will cover off how I decide when to automate, when not to automate and give some general tips on what I do when automating.
 
 ## Backups
 Even if you implement all of the controls here, there is always a risk things can go wrong. A good backup solution will be essential in that situation so that you can recover quickly and effectively. With backup solution I am not really talking about any specific software, but rather about everything that encompasses backups be that retention polices, storage policies, testing procedure ... .
