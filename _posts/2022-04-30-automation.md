@@ -22,6 +22,7 @@ Now let's get to the example. I'll use a new employee joining the business. Star
 First, let's check if this is a recurring task. In every business I ever worked in, there have been people joining that need new accounts, so it's safe to assume that this is a recurring task. It usually is not a set schedule though.
 
 Next are the actions required to complete this task (they are in the general order I have seen them completed in, in the past):
+
 * Filling out the new user form (and in some companies, there might be an approval process here as well)
 * Creating the account for the user
 * Assigning appropriate licenses to the user
@@ -35,7 +36,9 @@ Next are the actions required to complete this task (they are in the general ord
 * Providing the user's credentials to the manager
 * Manager provides the user's credentials to the user on their first day
 
+
 Now that we have the list of actions let's assign the time required for each
+
 * Filling out the new user form and approval if needed - 15 minutes
 * Creating the account for the user - 15 minutes
 * Assigning appropriate licenses to the user - 5 minutes
@@ -50,6 +53,7 @@ Now that we have the list of actions let's assign the time required for each
 Then I need to determine the frequency. Since this is not on a schedule, I will need to speak to the service desk to find out how often they need to create new users. For this example let's say there are 10 new employees each month.
 
 The next step is to determine what the automated process looks like and estimate the time effort required for each step:
+
 * New user form is filled out and approved if needed - 15 minutes
 * IT receives the form for validation - 5 minutes
 * Once validated the filled out details are automatically used to create the user account, assign the appropriate access, distribution lists, and collaboration - 0 minutes
@@ -70,21 +74,27 @@ There is also value in the additional security brought by automation that can be
 Now that you know the process I follow to make my decision, it's time for some tips on how to get started or implement automation.
 
 * Don't try and automate everything in one go, break it up into smaller pieces that you can test and implement independently.
+
 This way you can start reaping some benefits a lot quicker, and you also won't get overwhelmed with what needs to be done. If we take the same example as before, start by writing a script that creates the user from input you provide to the script (through a file or via the command-line). Once you have that working, move on to adding users to groups to a script. Then, once that works try and combine the two.
 
 * Don't be afraid to make mistakes and own up to them.
+
 I have made many mistakes automating things, they go from small things like accounts not getting created in the correct locations or where details are swapped around to much larger issues where several accounts got deleted including mailboxes or breaking line-of-business applications. In all instances, I put my hand up saying it was probably me because I did this or that. Not once have I gotten into trouble over it, and by being honest the problems could get fixed very quickly and colleagues could assist where needed. I have also learned a lot more from the errors I made than from when everything went right. And I have learned how to test things in such a way that any errors are much more limited in scope now.
 
 * Have a goal in mind.
+
 Personally, I can't motivate myself to learn something if I don't have an end goal in mind. Most of the time the end goal is a real-world problem I am having. I started learning PowerShell because there were tasks I wanted to automate that weren't possible using simple batch scripts. And while, before I had specific tasks I couldn't automate using batch files, I thought many times that I should learn PowerShell, I could never find the will to do it.
 
 * Don't give up.
+
 While some things might seem impossible when you first start, if you stick with it your skill level will increase. Things that once seemed impossible all of a sudden become possible.
 
 * There isn't only 1 right way
+
 There are many ways problems can be solved in scripting and usually, there are several ways to do the same action, each with its own pros and cons. The one to use will largely depend on what you put more emphasis on.
 
 * Review your previous code when you re-use it.
+
 Inevitably you will come to a point where you will re-use entire scripts or sections of scripts. It's always a good idea to review them, not only to make sure they will work, but you might have learned something new or notice a different way of doing what is in the code that you prefer.
 
 This brings me to the end of this article on automation. I hope it will assist you on your journey to automating all the things. As always, if you have any questions or comments please reach out.
