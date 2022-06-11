@@ -16,7 +16,7 @@ The script is very similar to the one I use when I want to change config files a
 ## The Script
 The script is in my GitHub repo [here](https://github.com/PeterDodemont/Scripts/tree/main/Misc).
 As usual, the script starts with several parameters. There is the transcript path I always include for troubleshooting purposes, then we have some parameters for the file path to search, the filename to search for, if the search should happen recursively into sub folders as well, and of course the new and old strings.
-```PowerShell
+```powershell
 Param
 (
 [Parameter(Mandatory=$false)]
@@ -46,7 +46,7 @@ $NewString
 ```
 
 The first part of the script starts the transcript if I am passing a path via the "TranscriptPath" parameter. This is useful when running scripts in non-interactive or hidden windows. Or if I am having someone else run the script, they can then just send me the log file created to show the results.
-```Powershell
+```powershell
 # Start transcript when Transcript parameter is passed.
 Try {
     If ($TranscriptPath){
@@ -108,7 +108,7 @@ Else {
 ```
 
 The very last part of the script is to stop the transcript if it has been started.
-```PowerShell
+```powershell
 # Stop transcript when Transcript parameter is passed.
 Try {
     If ($TranscriptPath){
