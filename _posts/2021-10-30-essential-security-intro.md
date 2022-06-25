@@ -34,7 +34,7 @@ With treat actors constantly evolving their tactics, good endpoint protection is
 ## [Automation](\automation.html)
 This actually goes hand in hand with the Zero Trust model. Because by building automation you can remove the need for user accounts to have access to a lot of things. Not only do you get improved security by automating, you also get increased productivity as you don't need to do boring and repetitive tasks, freeing up your valuable time to do something else. I will cover off how I decide when to automate, when not to automate and give some general tips on what I do when automating.
 
-## Backups
+## [Backups](\backups.html)
 Even if you implement all of the controls here, there is always a risk things can go wrong. A good backup solution will be essential in that situation so that you can recover quickly and effectively. I won't be talking about any specific software, but rather about everything that encompasses backups be that retention polices, storage policies, testing procedure ... .
 
 ## [Application Allow Listing](\app-allow-listing.html)
