@@ -46,7 +46,7 @@ Like operating systems, application also need to be patched on a regular basis. 
 ## Workstation and Server Hardening
 With workstation and server hardening you are looking at ways to minimise the number of vectors any treat actor could exploit to get access. There are numerous hardening benchmarks out there to choose from, but blindly implementing them will probably lead to much frustration and ultimately to abandoning it completely. What we can do instead is target some safe areas to start with and then move through to harder items as we go.
 
-## Credential, Certificate and Secret Management
+## [Credential, Certificate and Secret Management](\cred-cert-secret-mgmt.html)
 When I say credential management most will probably think about password managers. And while they are very useful, I actually prefer to go down the less traditional road of SSO for credential management. Having it so a user only needs to remember 1 set of credentials will by way more likely to succeed than having to use another application.
 Certificate management is something that is always a struggle. It is not only about making sure you know where your certificates are used and when they expire, it also covers who has access to them and who has accessed them. I will also cover my thoughts on what types of certificates you should be using.
 
