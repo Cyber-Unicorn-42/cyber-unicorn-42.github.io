@@ -27,7 +27,8 @@ $CurrentUserAsSystem = $false
 ```
 
 Next, I check if the $CurrentUserAsSystem variable was set to $true. If it is, I get the details of the currently logged in user from WMI. WMI stores this in the "domain\username" format, but I need them separately, so I split the information from WMI at the "\\" and store each part in a variable. I can then use that information to get the SID of the user account. I need the SID to be able to check the value of the registry key for the current user. When running as the system account, HKCU will be the registry keys and values for the system account. In the registry a user's keys and values are stored under a key in the HKEY_Users hive using the user's SID (since the SID will never change even if other details of the account are changed).
-Once I have the SID, I remove any current HKCU mapping in PowerShell and remap it to the section of the registry I need it to point to.
+Once I have the SID, I remove any current HKCU mapping in PowerShell and remap it to the section of the registry I need it to point to.  
+One thing to note here is that getting the SID in this way only works if there is a local active directory, for devices that are only joined to Azure this will not work (thanks to [@MJGAIL](https://twitter.com/MJGAIL) for helping me discover this).
 ```powershell
 # Check if you need to check it for the current user as system
 If ($CurrentUserAsSystem -eq $true){

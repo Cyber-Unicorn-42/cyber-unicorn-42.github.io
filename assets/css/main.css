@@ -401,9 +401,9 @@ html, body {
   overflow: visible
 }
 html {
-    line-height: 1.75;
+    line-height: 1.25;
     letter-spacing: 0.002em;
-    font-size: 1.375rem;
+    font-size: 1rem;
 }
 body {
   font-family: var(--font1);
@@ -537,7 +537,7 @@ svg {
           flex-grow: 1;
 }
 .wrapper {
-  width: 960px;
+  /*width: 960px;*/
   max-width: 90%;
   margin: 0.75em auto 0.75em;
   position: relative;
@@ -890,6 +890,7 @@ svg.menu-icon-house {
   font-weight: var(--font2-bold);
   text-transform: uppercase;
   color: white;
+  font-size: 1.375rem;
 }
 .post-card-link:hover {
   opacity: .75;
@@ -1457,7 +1458,7 @@ tweet a {
           border-top-right-radius: 20px;
   -webkit-box-shadow: 0px 2px 4px var(--shadow);
           box-shadow: 0px 2px 4px var(--shadow);
-  max-width: 800px;
+  max-width: 90%;
 }
 /* full width image in posts */
 img[src$="#full"] {
