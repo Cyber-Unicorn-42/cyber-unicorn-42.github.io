@@ -3,7 +3,7 @@ layout: post
 read_time: true
 show_date: true
 title:  Training completed successfully, 100% secure for the next year
-date:   2022-07-23 10:00:00 +1000
+date:   2022-08-06 10:00:00 +1000
 description: Does user education work?
 img: posts/2022-08-06-user-education/hero.jpg
 tags: [security,non-technical]
