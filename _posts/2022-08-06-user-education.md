@@ -33,9 +33,11 @@ Just like with the method, I believe that you cannot have a single frequency acr
 ### Incentive
 
 Incentivising users to do their training can be very challenging, traditionally the method depicted below is used.  
+
 ![Woman with light hair pointing a gun at a man with dark hair across a table, in black and white](/assets/img/posts/2022-08-06-user-education/threat.jpg "Threat")  
 Threatening the users with some negative consequences for not completing the training might be effective in getting them to do it, but is it the best way to get them engaged? I would say it isn't, as they are really only completing the training to avoid the negative consequence.  
 Drawing on my personal experience, raising my son and teaching/training people over the years, rewarding is a much more effective teaching method.  
+
 ![Small metal money box full of cash in 3 neat stacks](/assets/img/posts/2022-08-06-user-education/reward.jpg "Reward")  
 There is a myriad of behaviors and rewards you can look at, some of the rewards might be:
 - Cash prize (as in the picture above)
