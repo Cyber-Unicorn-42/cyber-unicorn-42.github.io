@@ -50,8 +50,8 @@ With workstation and server hardening you are looking at ways to minimise the nu
 When I say credential management most will probably think about password managers. And while they are very useful, I actually prefer to go down the less traditional road of SSO for credential management. Having it so a user only needs to remember 1 set of credentials will by way more likely to succeed than having to use another application.
 Certificate management is something that is always a struggle. It is not only about making sure you know where your certificates are used and when they expire, it also covers who has access to them and who has accessed them. I will also cover my thoughts on what types of certificates you should be using.
 
-## User Education
-Users are your very last line of defence in most cases. And while we do everything to avoid the user ever seeing anything suspicious, they will more than likely see something at some point. I will cover what I believe is the most effective way of not only getting users educated but keeping them that way.
+## [User Education](\user-education.html)
+Users are your very last line of defense in most cases. And while we do everything to avoid the user ever seeing anything suspicious, they will more than likely see something at some point. I will cover what I believe is the most effective way of not only getting users educated but keeping them that way.
 
 ## Risk Management
 While not something you can implement on a device, making sure you do proper risk management is crucial. Not only will it allow you to know where to focus on, it will also assist in providing better justifications for implementing the other controls on this page. Having information about what risk get most attempts of exploitation will allow you to put some hard numbers against the risks and compare the cost of doing nothing with the cost of implementing the appropriate control.
