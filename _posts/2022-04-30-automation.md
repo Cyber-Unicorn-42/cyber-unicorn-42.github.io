@@ -14,13 +14,16 @@ Learning how to automate tasks has proven time and time again to be one of the b
 ## When to Automate and When Not to Automate
 Deciding when it is worth automating something and when it isn't can be tricky. Especially if you have already automated the most obvious tasks previously. I'll go through the all the steps of my approach first, followed an example of those steps:
 
-The very first step is to determine if the task at hand is recurring (either on a schedule or ad hoc). Next, is getting a full end-to-end overview of what will be required to complete the task I want to automate, not just actions I would do myself, but also actions by other people (I will explain why others are important as well shortly). After I have a list of actions, I will try to work out how long each of these actions takes when done manually. Once I know how long the entire process is, I will determine the frequency of the tasks. You might think it odd that I only determine the actual frequency at this point, but if I were to do it earlier I might decide that a task I do every 6 months is not worth automating because it is so infrequent. That task might take 2 weeks to complete though, so if I know it will take 2 weeks it might still be worth looking into further. Then, I will try and work out what the automated tasks will look like in an ideal world. This then gives me the ability to work out an estimate of how much time would have to spend on the task once automation has been completed. I can then compare that to the total time of the manual task and combine that with the frequency to determine the time saved. There is one final piece of information that I then also include before making a final decision and that is the reduction in errors. Anything done manually is prone to errors, once automated the same actions will be done exactly the same way each time. There will likely still be errors (e.g. errors in the original input, or changes to application behaviors) but the error rate will be significantly reduced.
-
+The very first step is to determine if the task at hand is recurring (either on a schedule or ad hoc).  
+Next, is getting a full end-to-end overview of what will be required to complete the task I want to automate, not just actions I would do myself, but also actions by other people (I will explain why others are important as well shortly).  
+After I have a list of actions, I will try to work out how long each of these actions takes when done manually.  
+Once I know how long the entire process is, I will determine the frequency of the tasks. You might think it odd that I only determine the actual frequency at this point, but if I were to do it earlier I might decide that a task I do every 6 months is not worth automating because it is so infrequent. That task might take 2 weeks to complete though, so if I know it will take 2 weeks it might still be worth looking into further.  
+Then, I will try and work out what the automated tasks will look like in an ideal world. This then gives me the ability to work out an estimate of how much time would have to spend on the task once automation has been completed. I can then compare that to the total time of the manual task and combine that with the frequency to determine the time saved.  
+There is one final piece of information that I then also include before making a final decision and that is the reduction in errors. Anything done manually is prone to errors, once automated the same actions will be done exactly the same way each time. There will likely still be errors (e.g. errors in the original input, or changes to application behaviors) but the error rate will be significantly reduced.  
 I don't have a hard and fast rule for when it is appropriate to automate. The way I normally make the decision is that if I believe the time involved to automate can be "recovered" within about 1 year, this includes the time saved by other people on their specific actions.
 
-Now let's get to the example. I'll use a new employee joining the business. Starting once the recruitment process has been completed and finishing as the user logs in for the first time. This is an obvious task to automate, but it is very useful as an example.
-First, let's check if this is a recurring task. In every business I ever worked in, there have been people joining that need new accounts, so it's safe to assume that this is a recurring task. It usually is not a set schedule though.
-
+Now let's get to the example. I'll use a new employee joining the business. Starting once the recruitment process has been completed and finishing as the user logs in for the first time. This is an obvious task to automate, but it is very useful as an example.  
+First, let's check if this is a recurring task. In every business I ever worked in, there have been people joining that need new accounts, so it's safe to assume that this is a recurring task. It usually is not a set schedule though.  
 Next are the actions required to complete this task (they are in the general order I have seen them completed in, in the past):
 
 * Filling out the new user form (and in some companies, there might be an approval process here as well)
@@ -50,8 +53,7 @@ Now that we have the list of actions let's assign the time required for each
 * Providing the user's credentials (both the main and for additional apps) to the manager - 5 minutes
 * Manager provides the user's credentials (both the main and for additional apps) to the user on their first day - 5 minutes
 
-Then I need to determine the frequency. Since this is not on a schedule, I will need to speak to the service desk to find out how often they need to create new users. For this example let's say there are 10 new employees each month.
-
+Then I need to determine the frequency. Since this is not on a schedule, I will need to speak to the service desk to find out how often they need to create new users. For this example let's say there are 10 new employees each month.  
 The next step is to determine what the automated process looks like and estimate the time effort required for each step:
 
 * New user form is filled out and approved if needed - 15 minutes
@@ -63,11 +65,9 @@ The next step is to determine what the automated process looks like and estimate
 * A device is assigned to the user - 5 minutes
 * Device provisioning is initiated and includes installation of the apps required for the user - 5 minutes
 
-The final piece of information I need is a look at the reduction in the error rate. Let's say the error rate is 2 a month in the manual process, and 1 every 2 months for the automated process. For argument's sake, I'll also say all errors need to be manually fixed and it takes 20 minutes to fix each error.
-If I combine all the numbers I spent a total of 135 minutes on the manual task 10 times a month, plus 40 minutes fixing errors. this totals 1390 minutes spent each month on this task. For the automated task, I spent 65 minutes 10 times a month, plus 20 minutes fixing errors. This total is 670 minutes a month.
-
-By subtracting those 2 from each other I save 720 minutes (or 12 hours) a month once the process is automated. Using an 8-hour day, that means that I can spend nearly 4 full working weeks automating and still be ahead within a year. Estimating how long the automation will take has many variables that are highly dependent on the environment, so I won't try and do that here. But I doubt I would need 4 full weeks.
-
+The final piece of information I need is a look at the reduction in the error rate. Let's say the error rate is 2 a month in the manual process, and 1 every 2 months for the automated process. For argument's sake, I'll also say all errors need to be manually fixed and it takes 20 minutes to fix each error.  
+If I combine all the numbers I spent a total of 135 minutes on the manual task 10 times a month, plus 40 minutes fixing errors. this totals 1390 minutes spent each month on this task. For the automated task, I spent 65 minutes 10 times a month, plus 20 minutes fixing errors. This total is 670 minutes a month.  
+By subtracting those 2 from each other I save 720 minutes (or 12 hours) a month once the process is automated. Using an 8-hour day, that means that I can spend nearly 4 full working weeks automating and still be ahead within a year. Estimating how long the automation will take has many variables that are highly dependent on the environment, so I won't try and do that here. But I doubt I would need 4 full weeks.  
 There is also value in the additional security brought by automation that can be taken into consideration, but this is a lot harder to define tangibly unless you have experienced security incidents related to those types of tasks previously. So I will also leave those out of this calculation, but I did want to mention them
 
 ## Automation Tips and Tricks
@@ -79,7 +79,9 @@ This way you can start reaping some benefits a lot quicker, and you also won't g
 
 ### Don't be afraid to make mistakes and own up to them.
 
-I have made many mistakes automating things, they go from small things like accounts not getting created in the correct locations or where details are swapped around to much larger issues where several accounts got deleted including mailboxes or breaking line-of-business applications. In all instances, I put my hand up saying it was probably me because I did this or that. Not once have I gotten into trouble over it, and by being honest the problems could get fixed very quickly and colleagues could assist where needed. I have also learned a lot more from the errors I made than from when everything went right. And I have learned how to test things in such a way that any errors are much more limited in scope now.
+I have made many mistakes automating things, they go from small things like accounts not getting created in the correct locations or where details are swapped around to much larger issues where several accounts got deleted including mailboxes or breaking line-of-business applications.  
+In all instances, I put my hand up saying it was probably me because I did this or that. Not once have I gotten into trouble over it, and by being honest the problems could get fixed very quickly and colleagues could assist where needed.  
+I have also learned a lot more from the errors I made than from when everything went right. And I have learned how to test things in such a way that any errors are much more limited in scope now.
 
 ### Have a goal in mind.
 

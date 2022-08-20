@@ -25,7 +25,7 @@ I think it goes without saying that you are going to want to have an endpoint pr
 ### Ransomware Prevention and Detection
 With ransomware being the most prevalent threat currently and there not being any signs of it slowing down, I feel this category of malware deserves a special mention of its own.
 
-When I talk about ransomware prevention, I'm mostly talking about protections to limit the amount of files that can be changed in a given period or a given folder or stopping known ransomware from running. An example of the protections is Windows Controlled folder access, it allows you to protect specified files and folders from being changed by any app that is not listed as trusted.
+When I talk about ransomware prevention, I'm mostly talking about protections to limit the amount of files that can be changed in a given period or a given folder or stopping known ransomware from running. An example of the protections is Windows Controlled folder access, it allows you to protect specified files and folders from being changed by any app that is not listed as trusted.  
 When talking ransomware detection, I'm mostly talking about the ability of the software to detect changes to the system that indicate ransomware is running. This usually involves detecting large amounts of files being changed by a single application.
 
 You might think that if you have the prevention in place, then you won't need the detection. But there is no guarantee that the prevention won't be circumvented. Someone could find a way to exploit a trusted app or they might find a way to disable the software providing the protections or ... . having both means that you are provided greater coverage for more scenarios.
