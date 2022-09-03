@@ -2,9 +2,9 @@
 layout: post
 read_time: true
 show_date: true
-title:  Designing a network is like building an inverted pyramid
+title:  Design a network your future self will not curse you for
 date:   2022-09-02 10:00:00 +1000
-description: How to design a network simply and effectively
+description: How to design a network simply, effectively and ready for what the future might bring
 img: posts/2022-09-02-designing-a-network/hero.jpg
 tags: [security,networking]
 author: Peter Dodemont
