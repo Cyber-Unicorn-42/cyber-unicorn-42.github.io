@@ -46,8 +46,6 @@ I usually re-use the list of devices from the 3rd octet, plus some additional in
 
 ## An Example and Creating My Documentation
 
-############## inverted pyramid ########
-
 To build the documentation, let's look at an example that ties this all together. Here are the basic details I will use as a starting point.  
 
 - 5 offices
@@ -57,7 +55,8 @@ To build the documentation, let's look at an example that ties this all together
 
 Going back to the foundation, I always use the 10.0.0.0/8 network. No real need to document that as it generally won't be used anywhere.  
 Next are the different locations, in this example, there are 10. The 5 offices, the 2 data centers, and the cloud are obvious. There is also going to be a VPN location for devices connecting in remotely, and I usually also like to have a single subnet that stretches between the data centers (this makes moving servers, as part of failover or otherwise, a lot easier). 
-As per my design, I use the 2nd octet to divide the private network into /16 subnets, 1 for each location.
+As per my design, I use the 2nd octet to divide the private network into /16 subnets, 1 for each location.  
+
 ![A table with names in one column and ip addresses in the next column, each octet of the ip address has a different color, and the 2nd octet changes for each line](/assets/img/posts/2022-09-02-designing-a-network/2ndoctet.png "2nd Octet")  
 As you can see from the screenshot above, I simply list the sites and then increment the 2nd octet by 1 for the next site. I then leave a large gap and assign the VPN and data center network subnets near the end of the available range, finally, I add the cloud even closer to the end of the range, again leaving a gap between the end of the data center ranges and the cloud.  
 I don't create a particular order for the sites, I have tried to use many different schemes to order them in the past, but it inevitably stops following that scheme as the business opens or closes offices. So instead I just pick an order at random. The gaps I leave between site ranges, VPN range, data center ranges, and cloud ranges are there in case of future expansion. The business is more likely to open more new office locations than they are new data centers. And there are likely to be even fewer cloud providers than there are data centers. Hence the large gap after offices and the smaller gap after datacenters and an even smaller gap after cloud providers.  
@@ -79,6 +78,7 @@ Now I need to work out what all the different device types and what is the highe
 - UPS's - Max 1
 
 As you can see there are a lot of different types of devices used across the business. Let's use that to create the template for each site.  
+
 ![A table with names in one column and ip addresses in the next column, each octet of the ip address has a different color, and the 3rd octet changes for each line](/assets/img/posts/2022-09-02-designing-a-network/3rdoctet.png "3rd Octet")  
 You'll notice that there are fewer subnets than there are device types. The reason for that is that I group devices together into different categories, depending on the network access required.  
 - Corporate is for PCs and mobile devices issued by the business, and also meeting room PCs (all these devices require access to corporate resources).
@@ -100,12 +100,14 @@ I also usually assign IT the 42 subnet, since that is the answer to life, the un
 {% include youtubeplayer.html id="tK0urw144cU" %}
 
 The last part is assigning the 4th octet. As mentioned I will just re-use the list of devices from the 3rd octet and include some additional information from the configuration of some of the devices.  
+
 ![A table with names in one column and ip addresses in the next column, each octet of the ip address has a different color, the 4th octet changes for each line, and the last 8 lines include ip ranges](/assets/img/posts/2022-09-02-designing-a-network/4thoctet.png "4th Octet")  
 The choice of what values to assign to the 4th octet is entirely up to you. Personally, I like using high numbers for the standard devices (like the routers and firewalls in my example), other people prefer to use low numbers, it really doesn't matter.  
 You can see that I have again left some gaps, which you will know by now is just in case something comes up. I then also kept the addresses for the routers and firewalls following the same pattern to make it easy to remember.  
 For subnets with a varying number of devices, I prefer to use DHCP scopes as that means the devices can then just be added by anyone without needing to be configured in any special way (most devices come with DHCP set as the default method for getting an IP address). If these devices require static IPs (like printers or management interfaces) you can always assign a DHCP reservation. This also helps with replacement devices as you can just update the reservation without having to manually configure something on the device.  
 
-When all put together the documentation looks like this
+When all put together the documentation looks like this  
+
 ![a spreadsheet combining all 3 previous tables next to each other from left to right](/assets/img/posts/2022-09-02-designing-a-network/full.png "Full Spreadsheet")  
 If I ever need to refer to the documentation, I can just pick the item from each section as I go. The color coding also makes it easy for any other staff that might need to use the documentation, even if they are not familiar with the terminology.  
 
