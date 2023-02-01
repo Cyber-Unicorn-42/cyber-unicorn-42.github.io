@@ -48,6 +48,7 @@ Some of the behaviors you monitor could be:
 - Least amount of malicious links clicked in a month/quarter/year
 - Most true positive reports of malicious emails
 - Improvements to processes that improve security
+
 If you are going to look at behaviors that measure something (like the number of links clicked), you need to make sure you can measure it in a consistent and repeatable way to make sure it is fair for all your users.
 
 I hope that this article has given you some useful new insights into user education. If there is something you believe I missed or that is incorrect, or if you don't agree please reach out. I'm definitely not all-knowing, and there is always more I can learn.
