@@ -43,7 +43,8 @@ There is a myriad of behaviors and rewards you can look at, some of the rewards 
 - Cash prize (as in the picture above)
 - Positive feedback on annual performance review
 - A team outing
-And some of the behaviors could be:
+
+Some of the behaviors you monitor could be:
 - Least amount of malicious links clicked in a month/quarter/year
 - Most true positive reports of malicious emails
 - Improvements to processes that improve security
