@@ -5,7 +5,7 @@ show_date: true
 title:  The mystery of the non working managed installer WDAC policy
 date:   2024-07-06 10:00:00 +1000
 description: How I solved the mystery of the WDAC managed installer policy not working on some devices
-img: posts/2024-07-07-non-working-wdac-managed-installer/hero.jpg
+img: posts/2024-07-07-non-working-wdac-managed-installer/hero.png
 tags: [security]
 author: Peter Dodemont
 ---
