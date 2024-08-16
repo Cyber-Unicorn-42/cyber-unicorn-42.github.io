@@ -9,9 +9,9 @@ img: posts/2024-08-11-wdac-policy-merge/hero.jpg
 tags: [powershell]
 author: Peter Dodemont
 ---
-Managing WDAC can be quite hard and time-consuming with the tools provided by Microsoft. When I had to start managing WDAC I worked on some scripts that would make the process much easier.
-I won't be going through what my process for the deployment is. I have a tool-agnostic blog post on that [here](\app-allow-listing.html)
-I also won't cover what is needed to create and deploy the first WDAC policy, Microsoft has documentation on this available [here](https://learn.microsoft.com/en-us/windows/security/application-security/application-control/windows-defender-application-control/design/wdac-design-guide).
+Managing WDAC can be quite hard and time-consuming with the tools provided by Microsoft. When I had to start managing WDAC I worked on some scripts that would make the process much easier.\
+I won't be going through what my process for the deployment is. I have a tool-agnostic blog post on that [here](\app-allow-listing.html).\
+I also won't cover what is needed to create and deploy the first WDAC policy, Microsoft has documentation on this available [here](https://learn.microsoft.com/en-us/windows/security/application-security/application-control/windows-defender-application-control/design/wdac-design-guide).\
 What I will be sharing instead is the scripts I used to make the ongoing management and policy updates a lot easier. There will be 4 scripts I will be sharing:
 * WDAC-MergePolicy.ps1: This post
 * WDAC-RefreshPolicy.ps1: The script used on each device to refresh the policy
@@ -19,12 +19,12 @@ What I will be sharing instead is the scripts I used to make the ongoing managem
 * WDAC-IntuneUpload: The script that automates the upload, assignment, supersedence, and version management in Intune.
 
 ## The Script
-You can find the script in my GitHub Repo [here](https://github.com/PeterDodemont/Scripts/tree/main/Misc).
+You can find the script in my GitHub Repo [here](https://github.com/PeterDodemont/Scripts/tree/main/Misc).\
 This script will add the XML files provided to existing XML policy files. Unless a specific policy version is specified it will grab the latest policy version XML file and add the the config from the specified XML files. The script will create both audit mode (AM) and enforced mode (EM) XML policy files. It will only run against 1 specific group at a time. This is because I need to be careful and precise about what files get added to the policy. I want to reduce the risk of accidentally adding files to a policy that shouldn't have it.
 
-As with most of my other scripts, I have parameters set up to take all the variables that change with each run or provide options for script execution.
-There are 2 mandatory parameters, 1 for the IDs used for the groups in your deployment (CohortID) and 1 for the XML files that will be added to the config (AddToScan).
-then there are also 2 optional parameters, 1 to set a specific old policy version number to use (instead of the latest version found), and 1 to specify the new policy version number to use (this is useful if you want to jump major versions).
+As with most of my other scripts, I have parameters set up to take all the variables that change with each run or provide options for script execution.\
+There are 2 mandatory parameters, 1 for the IDs used for the groups in your deployment (CohortID) and 1 for the XML files that will be added to the config (AddToScan).\
+then there are also 2 optional parameters, 1 to set a specific old policy version number to use (instead of the latest version found), and 1 to specify the new policy version number to use (this is useful if you want to jump major versions).\
 ```powershell
 param (
  [Parameter(Mandatory=$false)]
@@ -39,12 +39,12 @@ param (
 )
 ```
 
-After the parameters there are a number of variables that are being set, these will need to be customized to fit your needs. They are set as variables instead of parameters, as these should stay the same for each run. You will need to update these variables so they suit your environment
-Before digging into the variables and what they do, I want to note that I have all WDAC-related files in a folder structure with sub-folders. There are folders for the scripts, policy XML files, policy binary files, additional XML files to be added, and so on.
-The first 2 variables, PolicyPathAM and PolicyPathEM, are the relative paths to the folders containing the policy XML files. I have a separate folder for each policy type for each different cohort.
-The next variable, ApplicationXMLPath, sets the relative path to the folder containing the XML files to be added. In my setup, this folder actually contains sub-folders for each application to make management easier, but that is not required.
-Then, I get the date in the year-month-day format so it can be used in file names.
-The last set of variables, NewPolicyBaseNameAM and NewPolicyBaseNameEM, specify the fixed part of each policy XML filename.
+After the parameters there are a number of variables that are being set, these will need to be customized to fit your needs. They are set as variables instead of parameters, as these should stay the same for each run. You will need to update these variables so they suit your environment.\
+Before digging into the variables and what they do, I want to note that I have all WDAC-related files in a folder structure with sub-folders. There are folders for the scripts, policy XML files, policy binary files, additional XML files to be added, and so on.\
+The first 2 variables, PolicyPathAM and PolicyPathEM, are the relative paths to the folders containing the policy XML files. I have a separate folder for each policy type for each different cohort.\
+The next variable, ApplicationXMLPath, sets the relative path to the folder containing the XML files to be added. In my setup, this folder actually contains sub-folders for each application to make management easier, but that is not required.\
+Then, I get the date in the year-month-day format so it can be used in file names.\
+The last set of variables, NewPolicyBaseNameAM and NewPolicyBaseNameEM, specify the fixed part of each policy XML filename.\
 ```powershell
 # Set variables
 # Set paths for policy XML files
@@ -69,11 +69,11 @@ $MissingXMLFiles = @()
 $MergedXMLFiles = @()
 ```
 
-Now that all variables are set, I first check to see if an old policy version was specified through its parameter, OldBasePolicyVersion. If an old policy version number was specified, I parse the number into a a version number.
-If the old policy version is not specified I get the version number from the most recent audit mode policy file (I keep audit and enforced mode policies identical as that makes management a lot easier).
-First, I get the filename without the extension of the most recent file in the audit mode policy path specified earlier.
-Then, I split the file so only the version number remains.
-Next, I remove "v" so I am left with a number one.
+Now that all variables are set, I first check to see if an old policy version was specified through its parameter, OldBasePolicyVersion. If an old policy version number was specified, I parse the number into a a version number.\
+If the old policy version is not specified I get the version number from the most recent audit mode policy file (I keep audit and enforced mode policies identical as that makes management a lot easier).\
+First, I get the filename without the extension of the most recent file in the audit mode policy path specified earlier.\
+Then, I split the file so only the version number remains.\
+Next, I remove "v" so I am left with a number one.\
 Finally, I parse the number into a version number.
 ```powershell
 # Check if old base policy version was provided, if not get the latest policy version from the most recently modified file
@@ -126,10 +126,10 @@ Then, I check if the file exists or not. If it doesn't exist write a message to 
         $MissingXMLFiles += $SoftwareScanToAdd
 ```
 
-If the file does exist, confirm this with a message on the screen and start the merge process.
-The merge process starts by setting the search string used for the path to the old policy file to use. This uses the audit mode path and old policy versions specified earlier.
-Next, I do a search for that file and grab the full path to that file. Once I have the filename I write a message to the screen with the full path to the old policy file.
-Then, I set the names that will be used for the new policy files and inside the XML by combining, the base name, the cohort ID, the date, and the version number.
+If the file does exist, confirm this with a message on the screen and start the merge process.\
+The merge process starts by setting the search string used for the path to the old policy file to use. This uses the audit mode path and old policy versions specified earlier.\
+Next, I do a search for that file and grab the full path to that file. Once I have the filename I write a message to the screen with the full path to the old policy file.\
+Then, I set the names that will be used for the new policy files and inside the XML by combining, the base name, the cohort ID, the date, and the version number.\
 The final step in the preparation is setting the full paths for both audit and enforced mode files by combining the variable with the paths, names from the previous step, and the file extension (.xml).
 ```powershell
  }else{
@@ -151,9 +151,9 @@ The final step in the preparation is setting the full paths for both audit and e
         $NewBasePolicyEMFileXML = $PolicyPathEM+$NewPolicyNameEM+".xml"
 ```
 
-With all the preparation work done, I can start the process of merging the XML file into the existing policy.
-I output a message the merge is starting and that this process can take some time (the larger the policy the longer this step takes), then I start the merge.
-I suppress the output of this command by sending it to "Out-Null"
+With all the preparation work done, I can start the process of merging the XML file into the existing policy.\
+I output a message the merge is starting and that this process can take some time (the larger the policy the longer this step takes), then I start the merge.\
+I suppress the output of this command by sending it to "Out-Null".\
 Next, I modify the version information and name inside the XML file commands. This information is reported back into the logs, so updating it makes ongoing management easier.
 ```powershell
         Try {
@@ -171,8 +171,8 @@ Next, I modify the version information and name inside the XML file commands. Th
  }
 ```
 
-With the audit mode policy merged, I copy the audit mode policy to the enforced mode policy folder while simultaneously renaming it.
-I then change the name inside the XML to indicate that this is the enforce mode policy.
+With the audit mode policy merged, I copy the audit mode policy to the enforced mode policy folder while simultaneously renaming it.\
+I then change the name inside the XML to indicate that this is the enforce mode policy.\
 Finally, I change the option in the XML file that indicates if the policy is for audit more or enforced mode.
 ```powershell        
         Try {
@@ -190,9 +190,9 @@ Finally, I change the option in the XML file that indicates if the policy is for
  }
 ```
 
-The are a few steps left before we can start the loop again.
-First, I add the path to the XML file, as specified in the parameter, to the array of files that were merged.
-Then we pause for 10 seconds to let the device settle.
+The are a few steps left before we can start the loop again.\
+First, I add the path to the XML file, as specified in the parameter, to the array of files that were merged.\
+Then we pause for 10 seconds to let the device settle.\
 Finally, we set the old version to be the version we just created and we set the new version number by adding 0.01 to the version we just created
 ```powershell
         # Add file to array containing files that were merged
@@ -208,9 +208,9 @@ Finally, we set the old version to be the version we just created and we set the
 }
 ```
 
-After the loop completes and no more files are left to be merged, there are a few final steps.
-Firstly, I set the final policy version to be the old policy version as set from the last loop.
-Next, I check if there are any files in the array with the XML files that were not found. If there is, I display a message with the details of the files that were missing.
+After the loop completes and no more files are left to be merged, there are a few final steps.\
+Firstly, I set the final policy version to be the old policy version as set from the last loop.\
+Next, I check if there are any files in the array with the XML files that were not found. If there is, I display a message with the details of the files that were missing.\
 Finally, I check if there are any files in the array with the XML files that were merged. If there is, I display a message confirming the files that were merged and what the final policy version ended up being.
 ```powershell
 # Set final policy version number
@@ -228,5 +228,5 @@ if ($MergedXMLFiles) {
 }
 ```
 
-That brings us to the end of the script. I hope this sheds some light on how I manage the process of updating the WDAC policy.
+That brings us to the end of the script. I hope this sheds some light on how I manage the process of updating the WDAC policy.\
 As always if you have any questions or comments, please reach out.
