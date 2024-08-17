@@ -26,7 +26,7 @@ The script starts with defining a number of parameters.\
 There are 2 mandatory parameters, CohortIDs and EnforcementLevels, and 1 optional one, PolicyVersionToCompile.\
 CohortIDs, is used to specify which cohorts you want to run the script for, and EnforcementLevels, is used to specify which enforcement levels the script will run for.\
 The script will run against each combination of specified CohortIDs and EnforcementLevels. E.g. if you specify 1 and 3 for the cohort IDs and AM and EM for the enforcement levels, the script will run for cohort 1 AM, cohort 1 EM, cohort 3 AM, and cohort 3 EM.\
-PolicyVersionToCompile, is used if I need to compile a specific version of a policy (useful if I merged multiple files and the policy doesn't load, I can step back through each version to see when it breaks).\
+PolicyVersionToCompile, is used if I need to compile a specific version of a policy (useful if I merged multiple files and the policy doesn't load, I can step back through each version to see when it breaks).
 ```powershell
 # Set parameters
 param (
@@ -231,7 +231,7 @@ During the move the file is also renamed, making identifying what cohort, enforc
 
 ```
 
-The final step of the cohort ID loop is removing variables that could cause issues in the next loop.\
+The final step of the cohort ID loop is removing variables that could cause issues in the next loop.
 ```powershell
         # Remove variables that could cause issues on next run
         Remove-Variable FullPolicyXMLPath -Force
@@ -247,7 +247,7 @@ The final step of the cohort ID loop is removing variables that could cause issu
         Write-Host "$EnforcementLevel Cohort $CohortID version $NewPolicyVersionToCompile successfully generated and packaged" -ForegroundColor Green
 ```
 
-After the cohort ID loops have completed for a specific enforcement level, I remove the variables that could cause issues in the next loop of the enforcement level loops.\
+After the cohort ID loops have completed for a specific enforcement level, I remove the variables that could cause issues in the next loop of the enforcement level loops.
 ```powershell
     # Remove variables that could cause issues on next run
     Remove-Variable BasePolicyXMLPath -Force
