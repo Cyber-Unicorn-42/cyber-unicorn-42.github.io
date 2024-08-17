@@ -18,8 +18,8 @@ If you are looking for any of the posts about the other scripts, I'll link them 
 * WDAC-IntuneUpload: The script that automates the upload, assignment, supersedence, and version management in Intune.
 
 ## The Script
-You can find the script in my GitHub Repo [here](https://github.com/PeterDodemont/Scripts/tree/main/Misc).\
-As mentioned in the intro, this script will load and apply the latest WDAC policy. It is used as the installation script for my Intune deployments./
+You can find the script in my GitHub Repo [here](https://github.com/PeterDodemont/Scripts/tree/main/Install-Scripts).\
+As mentioned in the intro, this script will load and apply the latest WDAC policy. It is used as the installation script for my Intune deployments.\
 The script will also regenerate .NET native images (since my policies have the Dynamic Code Security Option enabled).
 
 Since this script is used as the installation script for my Intune deployments, it starts with my customary parameters and relevant checks to enable the transcript.\
@@ -45,9 +45,9 @@ Catch {
 }
 ```
 
-After the transcript section, there is the section with all the variables that can be set or changed./
-First up we have a variable for the filename of the WDAC policy. WDAC requires this filename to be the same as the GUID that is specified in the policy (the GUID is set when the first version of a policy is created)./
-The next variable is the name of the executable that will be used for refreshing the policy. This executable needs to be downloaded from Microsoft if you don't already have a copy. RefreshPolicy.exe is the name the executable has when you download it, but you can change it to whatever you like./
+After the transcript section, there is the section with all the variables that can be set or changed.\
+First up we have a variable for the filename of the WDAC policy. WDAC requires this filename to be the same as the GUID that is specified in the policy (the GUID is set when the first version of a policy is created).\
+The next variable is the name of the executable that will be used for refreshing the policy. This executable needs to be downloaded from Microsoft if you don't already have a copy. RefreshPolicy.exe is the name the executable has when you download it, but you can change it to whatever you like.\
 The last variable to set is the location of where the WDAC policies get loaded from. This is a standard location as specified by Microsoft, as such there should be no need to change it.
 ```powershell
 # Set Variables
