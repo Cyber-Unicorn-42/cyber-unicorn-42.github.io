@@ -15,42 +15,55 @@ But how do you even get started with it and how do you know what to block and wh
 ## What is Allow Listing and How Does it Work
 As mentioned in the intro allow listing works by defining what applications are allowed to run and prevent anything else from running. The way this is achieved is by way of an agent that runs on the device that will intercept any application launches. It will then validate that the application is authorized using the rules that are defined in its configuration. If a rule authorizing is found for the application it will be allowed to run, otherwise, it will be blocked.\
 Defining what applications are allowed usually happens in 1 of 3 ways, using a file hash, using publisher information, or using file location. Each of these methods has pros and cons.
-* File Hash\
+* File Hash
+
 You can think of a file hash like a fingerprint for a file. A hashing algorithm is used to convert the data of the file into a series of letters and numbers. This series is always the same length no matter the size of the file and is (usually) significantly smaller than the original files. Crucially for a given algorithm a file with the same data will always produce the same hash and for all intents and purposes, files with different data will produce different hashes.\
 File hashes are the most secure way of building an allow list. Since each file will have to match exactly with a previously hashed file. Unfortunately, unless you have a team dedicated to allow listing this will be nearly impossible to maintain as every file that gets changed (say after installing security updates) would need to be rehashed and added back to the list. This can amount to thousands of files depending on what you are updating.
-* Publisher Information\
+* Publisher Information
+
 Publisher information is a lot more useful in most scenarios as it allows you to use the details of the certificate that was used to sign the application for allowing an application. I won't go into details about how application signing works, all you need to know is that it requires a certificate that is normally purchased from a 3rd party certificate authority.\
 Applications from the same companies are usually signed with the same certificates. This isn't always the case (especially for very large companies that develop lots of apps), but generally, even if it's not the same the number will be limited.\
 When using publisher information, you are allowing all applications that have the same publisher information to be run. This is less secure than file hashes, but also comes with much less management overhead. Acquiring a certificate for publishing apps isn't overly difficult, but since each certificate has a thumbprint that uniquely identifies it, even a new certificate with identical information will not match the allowed publisher information as the thumbprints won't match. So the only real risk here is from certificates that have been stolen (which happens occasionally).
-* Location\
+* Location
+
 File location is the least secure way of doing allow listing. It is still better than not having it, but all that a malicious actor would need to do is move the malware to the allowed location and then the application can run. With it being so easily circumvented, you might wonder why it is an option at all. Sometimes applications are not signed and they might be updated frequently enough that using a hash isn't manageable. This is usually the case for internally developed apps, they are rarely signed and update frequency on them will be very inconsistent. Non-admin users can't copy files to every location (they can't copy to "Program Files" for example), so the risk when allowing those locations is less than one where everyone can write to.
 
 That is, in a nutshell, how application allow listing works. Now that we know this let's move on to potential issues, my requirements, and my actual deployment process.
 
 ## Possible Pitfalls
 Before I will delve into my process for getting allow listing deployed, I want to go through some of the possible issues that can arise if the deployment of allow listing isn't planned carefully. (This won't be an exhaustive list, just the ones I believe are the most important ones.)
-* Excessive User Friction\
+* Excessive User Friction
+
 This is probably the one that is the most obvious, but also the most important. As with any good security solution, user experience should be an important consideration. By its nature, allow listing will cause some user friction, as unsanctioned applications that users are running will get blocked. But the amount of friction can be reduced if the deployment is handled correctly and only the unsanctioned applications are blocked.
-* Lost Productivity\
+* Lost Productivity
+
 This is another really important consideration. The majority of users should be able to be equally productive during and after the roll-out as they were before. Again planning is key to making sure this happens.
-* Inadequate Communication\
+* Inadequate Communication
+
 Users are going to have to be informed about what is going to happen as there most likely will be some sort of impact on them. The best communication is targeted at the right people and will also already answer some of the questions people will ask.
-* Lack of Training and Support for the Support Staff\
+* Lack of Training and Support for the Support Staff
+
 Inevitably users will run into problems and call the service desk for assistance, if the service desk agents are not properly trained, they could provide the wrong information to the user. By training them they will not only be able to provide users with the right information, but you might also be able to delegate some tasks to them meaning the users are assisted more quickly.
 
 ## My Requirements
 Now that we know some of the potential issues, let's take a look at what requirements I put on allow listing software.
-* Stacking Policies\
+* Stacking Policies
+
 What I mean by stacking policies is that you can have multiple policies apply to a device and it will combine all of the policies for you. This is super handy because it allows you to create a base policy for everyone, and then create smaller additional policies for certain groups of people that have special requirements (like the service desk or development team).
-* Centralized Logs\
+* Centralized Logs
+
 The logs should all be collected and sent off to a central location from where you can look at them. Having to dig up the log from each individual machine will make it very difficult to get an accurate representation of all the applications being run efficiently.
-* Easy to Configure Policies\
+* Easy to Configure Policies
+
 It should only take a couple of minutes to be able to look at the log and add the item from the log to a policy. Ideally, you'll be able to add an application to a policy directly from the log.
-* Cloud-Based\
+* Cloud-Based
+
 In the current environment, people work from anywhere and they might not always be connecting to a VPN, so having a management console in the cloud means that as long as there is internet connectivity policies can be updated on the clients. It doesn't have to be a SaaS solution, a self-hosted cloud-based system will work as well, but does usually require a lot more maintenance work, as you have to keep the underlying OS and the application itself up to date.
-* Lightweight Agent\
+* Lightweight Agent
+
 The agent will run on your clients whenever the client is on, so having a client that doesn't consume a lot of resources is critical to making sure the performance impact on the clients is minimal.
-* Override Mode\
+* Override Mode
+
 Being able to temporarily override the enforcement is incredibly useful when doing application updates. It allows you to install the application on the device and then capture any executions that would be blocked. These can then immediately be added to the policies before the updates are rolled out to everyone else (this is especially useful for applications added via file hash). The override should only be temporary though and revert back to enforcement automatically after the set time expired. It should also be protected so it cannot just be enabled by anyone.
 
 ## My Deployment Process
