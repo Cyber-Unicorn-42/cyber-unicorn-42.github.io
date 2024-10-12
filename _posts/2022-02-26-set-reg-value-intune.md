@@ -22,7 +22,7 @@ As proactive remediations require the script to be loaded in full and it is not 
 ```powershell
 # Set Variables
 $RegKeyFullPaths = @("HKCU:\SOFTWARE\Policies\Microsoft\Edge\Recommended\NewTabPageLocation")
-$RegKeyExpectedValue = "https://peterdodemont.com"
+$RegKeyExpectedValue = "https://cyberunicorn.me"
 $CurrentUserAsSystem = $false
 ```
 
@@ -112,7 +112,7 @@ Just like the detection script, the remediation script starts with setting varia
 ```powershell
 # Set Variables
 $RegKeyFullPaths = @("HKCU:\SOFTWARE\Policies\Microsoft\Edge\Recommended\NewTabPageLocation")
-$RegKeyValue = "https://peterdodemont.com"
+$RegKeyValue = "https://cyberunicorn.me"
 $RegType = "String" #See https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/set-itemproperty for support types
 $CurrentUserAsSystem = $false  # Use either $true or $false
 ```
