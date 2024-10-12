@@ -18,7 +18,7 @@ The other post in this series can be found below:
 * WDAC-IntuneUpload: The script that automates the upload, assignment, supersedence, and version management in Intune.
 
 ## The Script
-You can find the script in my GitHub repo [here](https://github.com/PeterDodemont/Scripts/tree/main/Misc).\
+You can find the script in my GitHub repo [here](https://github.com/Cyber-Unicorn-42/Scripts/tree/main/Misc).\
 This script is the one I use after I have merged my additions into a new policy. It finds the latest version of the policy for each enforcement level and cohort ID and then compiles it into the binary format used by WDAC.\
 After it has compiled the policy, it packages the policy, and the required scripts and files into an intunewin package that can be uploaded to Intune.\
 

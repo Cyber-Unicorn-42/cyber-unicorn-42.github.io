@@ -11,7 +11,7 @@ author: Peter Dodemont
 published: true
 ---
 Adding printers inevitably forms part of the onboarding process for all new users. You can automate this part easily enough through GPO. But what if you also want to provide users with a way to easily map printers through a familiar interface? In this article I'll show you how I did this in MEM. I wrote the scripts for MEM, but they should be able to be used in any deployment product that supports PowerShell. The process is simple, first create some dynamic groups in Azure AD, then create applications in MEM and finally assign the applications to the groups.
-If you just want the scripts, the install script is [here](https://github.com/PeterDodemont/Scripts/tree/main/Install-Scripts/Map-Printers.ps1), the detection script is [here](https://github.com/PeterDodemont/Scripts/tree/main/Intune/Printer-Detection.ps1) and the explanation of how it works is [here](#TheScripts).
+If you just want the scripts, the install script is [here](https://github.com/Cyber-Unicorn-42/Scripts/tree/main/Install-Scripts/Map-Printers.ps1), the detection script is [here](https://github.com/Cyber-Unicorn-42/Scripts/tree/main/Intune/Printer-Detection.ps1) and the explanation of how it works is [here](#TheScripts).
 
 ## The Dynamic Groups
 The rule I used for the dynamic groups is very simple
@@ -23,7 +23,7 @@ I can keep it this simple because to groups will only be used for deployments in
 ## <a name=TheScripts></a>The Scripts
 I created 2 scripts, one for the mapping of the network printers and another for the detection.
 ### The Mapping Script
-The script can be found [here](https://github.com/PeterDodemont/Scripts/blob/main/Install-Scripts/Map-Printers.ps1).
+The script can be found [here](https://github.com/Cyber-Unicorn-42/Scripts/blob/main/Install-Scripts/Map-Printers.ps1).
 Since I will be re-using this script for each office, I made the script to read the required information from the command line. This way there is no need to modify the script and then create a new .intunewin file for each site.
 
 First, I configure the parameters that need to be provided. I also perform a very basic validation on one of the parameters to try and confirm a FQDN was provided and not a NetBIOS name. I know this validation can probably be more advanced, but it serves its purpose well enough for me. Explanation on the use of each parameter can be found in the script, although the names are pretty self-explanatory.
@@ -100,7 +100,7 @@ If ($RemoveOnly -eq $false){
 }
 ```
 ### The Detection Script
-The script can be found [here](https://github.com/PeterDodemont/Scripts/blob/main/Intune/Printer-Detection.ps1).
+The script can be found [here](https://github.com/Cyber-Unicorn-42/Scripts/blob/main/Intune/Printer-Detection.ps1).
 In addition to mapping the printers I also need to be able to detect if the printers were added successfully. Since detection scripts in MEM get loaded directly and not via a command, I need to specify the printers directly in the script. But as they don't need to be in the .intunewin format it's not that big of an issue.
 
 First, I set the variable that contains the printers to be detected using the FQDN.

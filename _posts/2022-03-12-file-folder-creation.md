@@ -11,7 +11,7 @@ author: Peter Dodemont
 ---
 A little while ago I got a report one of the scripts deployed through MEM was no longer working. Upon investigating it was because the temp folder was missing. The person responsible for the script assumed the existence of a folder (C:\Temp) rather than checking it and creating as needed. As I was unsure if there were more scripts or installs that made the same assumption, I decided to create a proactive remediation I can deploy to all users. It checks if the folder exists already and if it doesn't it will be created.
 
-You can find both scripts I use in my [GitHub Repo](https://github.com/PeterDodemont/Scripts). The detection script is [here](https://github.com/PeterDodemont/Scripts/blob/main/Intune/ProactiveRem-Path-Detection.ps1) and the remediation script [here](https://github.com/PeterDodemont/Scripts/blob/main/Misc/Create-FileAndFolder.ps1).
+You can find both scripts I use in my [GitHub Repo](https://github.com/Cyber-Unicorn-42/Scripts). The detection script is [here](https://github.com/Cyber-Unicorn-42/Scripts/blob/main/Intune/ProactiveRem-Path-Detection.ps1) and the remediation script [here](https://github.com/Cyber-Unicorn-42/Scripts/blob/main/Misc/Create-FileAndFolder.ps1).
 
 ## The Detection
 Detecting the existence of a folder is pretty easy. It only requires a single command, but as with most of my scripts I try to make it so I can easily re-use it easily. I also add in error handling, as even the simplest things can go wrong.

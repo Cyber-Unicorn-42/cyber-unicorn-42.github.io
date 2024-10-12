@@ -12,7 +12,7 @@ author: Peter Dodemont
 Every once in a while I get asked to install some new fonts on all devices. Doing it locally on devices is pretty easy, copy them to the fonts folder and you're done. Doing it via Intune/MEM, you need to manually add a registry entry for each font you want to install.
 
 ## The Script
-As usual the script can be found in my Github Repo [here](https://github.com/PeterDodemont/Scripts/tree/main/Install-Scripts).
+As usual the script can be found in my Github Repo [here](https://github.com/Cyber-Unicorn-42/Scripts/tree/main/Install-Scripts).
 As most of my scripts, I try to make this one easily re-usable as well. I do this by using a parameter for the font file names. The parameter is also declared as an array, this way it will accept multiple filenames.
 
 Here is the way the parameter is defined at the start of the script.

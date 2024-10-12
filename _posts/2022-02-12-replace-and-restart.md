@@ -13,7 +13,7 @@ A little while ago I had to make some changes to some configuration files. The c
 (If you know how Splunk works you might think that I could have just made the change on the deployment server and have that pushed out, and you would be right, unfortunately as part of the re-ip process the routing to the deployment server was changed and reverting those changes would be more work and have a larger impact.)
 
 ## The Script
-You can find the script in my GitHub Repo [here](https://github.com/PeterDodemont/Scripts/tree/main/Misc).
+You can find the script in my GitHub Repo [here](https://github.com/Cyber-Unicorn-42/Scripts/tree/main/Misc).
 As with most of my other scripts, I have parameters setup to take all the variables required. This allows me to easily re-use this script in the future.
 There are parameters for the old and new strings as well as an array for the locations of the files. There is also a parameter for a process name and a service name who's use I'll cover further down. And finally, there is my customary transcript path parameter that can be used for troubleshooting if you need to see the exact output you'd get if running it through PowerShell directly.
 ```powershell

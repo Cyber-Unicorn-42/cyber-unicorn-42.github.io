@@ -18,7 +18,7 @@ If you are looking for any of the posts about my other WDAC scripts, I'll link t
 * WDAC-IntuneUpload: The script that automates the upload, assignment, supersedence, and version management in Intune.
 
 ## The Script
-You can find the script in my GitHub repo [here](https://github.com/PeterDodemont/Scripts/tree/main/Install-Scripts).\
+You can find the script in my GitHub repo [here](https://github.com/Cyber-Unicorn-42/Scripts/tree/main/Install-Scripts).\
 As mentioned in the intro, this script will load and apply the latest WDAC policy. It is used as the installation script for my Intune deployments.\
 The script will also regenerate .NET native images (since my policies have the [Dynamic Code Security](https://learn.microsoft.com/en-us/windows/security/application-security/application-control/windows-defender-application-control/design/wdac-and-dotnet) option enabled).
 

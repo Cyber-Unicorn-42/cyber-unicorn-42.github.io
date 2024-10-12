@@ -14,7 +14,7 @@ So today I will go through a script I wrote recently when I had to replace a con
 The script is very similar to the one I use when I want to change config files and restart a specific service afterward (which you can find [here](\replace-and-restart.html)). It does differ in that for this particular use case I did not need to restart any service (so I did not include that in the script although it can easily be copied over from the other script), and I had a large number of files that needed to be updated and all files had the same name but were in different folders.
 
 ## The Script
-The script is in my GitHub repo [here](https://github.com/PeterDodemont/Scripts/tree/main/Misc).
+The script is in my GitHub repo [here](https://github.com/Cyber-Unicorn-42/Scripts/tree/main/Misc).
 As usual, the script starts with several parameters. There is the transcript path I always include for troubleshooting purposes, then we have some parameters for the file path to search, the filename to search for, if the search should happen recursively into sub folders as well, and of course the new and old strings.
 ```powershell
 Param

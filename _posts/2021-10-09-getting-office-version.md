@@ -20,7 +20,7 @@ Another benefit of using proactive remediations is that the output is available 
 There are several ways you can go about getting the version of Office 365 installed. The easiest are to look at the version of one of the executables or to look at a specific registry entry. I opted for the registry entry as that seemed just as reliable as getting the version directly from the executable and I already had a proactive remediation script that looked at registry entries that I could tweak.
 
 ## The Script
-The script is pretty straightforward, you can find it [here](https://github.com/PeterDodemont/Scripts/blob/main/Intune/ProactiveRem-RegValue-Reporting.ps1).
+The script is pretty straightforward, you can find it [here](https://github.com/Cyber-Unicorn-42/Scripts/blob/main/Intune/ProactiveRem-RegValue-Reporting.ps1).
 The script contains a section that allows for checking values in the current user hive of the currently logged in user (even when running under system), but that is not relevant here so I'm going to skip over it.
 First, I set a variable with the full path to the registry value I want to check.
 ```powershell

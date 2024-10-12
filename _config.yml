@@ -1,9 +1,9 @@
 # Site settings
-title: Peter Dodemont
+title: Cyber Unicorn
 description: 'My experiences with security, IOT and technology in general' # this means to ignore newlines until "baseurl:"
 permalink: ':title:output_ext'
 baseurl: "/" # the subpath of your site, e.g. /blog
-url: "https://peterdodemont.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://cyberunicorn.me" # the base hostname & protocol for your site, e.g. http://example.com
 logo: "/assets/img/branding/logo.svg"
 logo-icon: "/assets/img/branding/icon.svg"
 logo-icon-SEO: "/assets/img/branding/icon.png" # must be a non SVG file
@@ -33,9 +33,9 @@ I love learning and enjoy passing on what I have learned to others. Feel free to
 # Contact links
 email: # Add your Email address
 phone: # Add your Phone number
-website: https://peterdodemont.github.io # Add your website
+website: https://cyberunicorn.mec # Add your website
 linkedin: peter-dodemont-23b16174 # Add your Linkedin handle
-github: PeterDodemont # Add your Github handle
+github: Cyber-Unicorn-42 # Add your Github handle
 mastodon: '@PeterDodemont@infosec.exchange' # Add your Mastodon handle
 bandcamp: # Add your Bandcamp username
 

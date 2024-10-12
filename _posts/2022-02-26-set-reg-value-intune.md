@@ -14,7 +14,7 @@ Setting the value of registry items is one of those group policy preferences, so
 
 I have created a single set of scripts that is able to be used for registry values either in the current user hive (HKCU) or in the local machine hive (HKLM) of the registry depending on your needs.
 
-MEM proactive remediation requires 2 scripts, 1 to detect whatever it is to change and 1 to apply the changes. Both scripts can be found in my [GitHub Repo](https://github.com/PeterDodemont/Scripts). The detection script is [here](https://github.com/PeterDodemont/Scripts/blob/main/Intune/ProactiveRem-RegValue-Detection.ps1) and the script to set the keys is [here](https://github.com/PeterDodemont/Scripts/blob/main/Misc/Set-RegValue.ps1).
+MEM proactive remediation requires 2 scripts, 1 to detect whatever it is to change and 1 to apply the changes. Both scripts can be found in my [GitHub Repo](https://github.com/Cyber-Unicorn-42/Scripts). The detection script is [here](https://github.com/Cyber-Unicorn-42/Scripts/blob/main/Intune/ProactiveRem-RegValue-Detection.ps1) and the script to set the keys is [here](https://github.com/Cyber-Unicorn-42/Scripts/blob/main/Misc/Set-RegValue.ps1).
 Let's look at the detection script first.
 
 ## The Detection Script

@@ -11,7 +11,7 @@ author: Peter Dodemont
 ---
 In this article I will go through what I did to get rid of the driver update prompts that users have been getting after Microsoft's August security patches. The patches included a change in the default behavior of point and print driver installations ([see here](https://msrc-blog.microsoft.com/2021/08/10/point-and-print-default-behavior-change/)). After deployment of the patches non-admin users were no longer able to install drivers using point and print unless some registry tweaks where applied.
 This change was causing a lot of our users to get the prompt you see in the hero image at the top of the post. Initially I expected it was a once off due to the change in behavior, so we proceeded to fix it manually for each user that logged a call. Since I work in a SMB and a significant amount of our workforce is unable to go into the offices because of COVID lockdowns the number of requests coming in wasn't too bad. All was good for about a week, then the messages re-appeared, this looked like it was going to need some investigation.
-If you just want the scripts I used they are in my [GitHub Scripts repo](https://github.com/PeterDodemont/Scripts/tree/main), and a breakdown of how they work can be found [here](#automating).
+If you just want the scripts I used they are in my [GitHub Scripts repo](https://github.com/Cyber-Unicorn-42/Scripts/tree/main), and a breakdown of how they work can be found [here](#automating).
 
 ## The Type 3 driver
 I started my investigations in the most logical place, comparing the drivers available on the print server against the locally loaded files. In the process I noticed some of the files in the driver were signed by Microsoft instead of HP. While this seems unusual, I didn't really think anything of it. After comparing a decent amount of files, I did come to the conclusion that some of the files where different versions. This was odd as we hadn't updated the drivers on the server at all, so I was not expecting any differences.
@@ -28,7 +28,7 @@ The next day one of the service desk techs reaches out, and his driver has still
 
 ## <a name=automating></a>Automating the driver updates
 Knowing what was happening I could now set out to try and solve the issue. The path to take was pretty clear, write a script that will collect all printers using the old type 3 driver, then remove those printers. Next, I'd need to remove the driver followed by finally re-adding the printers which now use the type 4 driver.
-You can find the PowerShell script ([Remove-PrintDriver.ps1](https://github.com/PeterDodemont/Scripts/tree/main/Misc/Remove-PrintDriver.ps1)) in my [GitHub Scripts repo](https://github.com/PeterDodemont/Scripts/tree/main) under [Misc](https://github.com/PeterDodemont/Scripts/tree/main/Misc). Below is the breakdown of how it works.
+You can find the PowerShell script ([Remove-PrintDriver.ps1](https://github.com/Cyber-Unicorn-42/Scripts/tree/main/Misc/Remove-PrintDriver.ps1)) in my [GitHub Scripts repo](https://github.com/Cyber-Unicorn-42/Scripts/tree/main) under [Misc](https://github.com/Cyber-Unicorn-42/Scripts/tree/main/Misc). Below is the breakdown of how it works.
 
 **I banged my head against the wall for days figuring out an issue with script throwing "The term 'pnputil' is not recognized as the name of a cmdlet, function, script file, or operable program". This ended up being because by default proactive remediations runs 32-bit PowerShell, all I needed to do was to set the appropriate option to run 64-bit PowerShell.**
 ![64-Bit PowerShell](/assets/img/posts/2021-09-04-PrintDriverUpdate/64bit_powershell.png "64-Bit PowerShell")
@@ -262,7 +262,7 @@ Catch {
 
 ## Deployment using Intune Proactive Remediations
 If you are not familiar with Intune Proactive Remediations have a look [here](https://docs.microsoft.com/en-us/mem/analytics/proactive-remediations). Basically, it allows you to specify a state you want to achieve and if that state isn't met it will run a script to remediate.
-To leverage this feature, I wrote a little script that will check if a particular driver is installed and if it is, the remediation will kick in. [This script](https://github.com/PeterDodemont/Scripts/tree/main/Intune/ProactiveRem-Driver-Detection.ps1) can also be found in my [GitHub Scripts repo](https://github.com/PeterDodemont/Scripts/tree/main) under [Intune](https://github.com/PeterDodemont/Scripts/tree/main/Intune).
+To leverage this feature, I wrote a little script that will check if a particular driver is installed and if it is, the remediation will kick in. [This script](https://github.com/Cyber-Unicorn-42/Scripts/tree/main/Intune/ProactiveRem-Driver-Detection.ps1) can also be found in my [GitHub Scripts repo](https://github.com/Cyber-Unicorn-42/Scripts/tree/main) under [Intune](https://github.com/Cyber-Unicorn-42/Scripts/tree/main/Intune).
 The script is fairly simple. You set a variable for the driver matching and it provides the required exit code depending on if the driver was found or not.
 ```powershell
 $DriverStoreInfName= "*hprub32a_x64.inf"

@@ -19,7 +19,7 @@ What I will be sharing instead is the scripts I used to make the ongoing managem
 * WDAC-IntuneUpload: The script that automates the upload, assignment, supersedence, and version management in Intune.
 
 ## The Script
-You can find the script in my GitHub repo [here](https://github.com/PeterDodemont/Scripts/tree/main/Misc).\
+You can find the script in my GitHub repo [here](https://github.com/Cyber-Unicorn-42/Scripts/tree/main/Misc).\
 This script will add the XML files provided to an existing XML policy file. Unless a specific policy version is specified it will grab the latest policy version XML file and add the the config from the specified XML files to it. The script will create both audit mode (AM) and enforced mode (EM) XML policy files. It will only run against 1 specific cohort at a time. This is because I need to be careful and precise about what files get added to the policy and I want to reduce the risk of accidentally adding files to a policy that shouldn't have it.
 
 As with most of my other scripts, I have parameters set up to take all the variables that change with each run or to provide options for script execution.\

@@ -12,7 +12,7 @@ author: Peter Dodemont
 This is going to be a brief post about the script I use to install MSI packages as Win32 apps in Intune/MEM. You might be wondering why I would not just install them as line of business apps in Intune/MEM as that takes care of a number of items by itself. The reason is that there are a number of key things you can't do with the line of business apps (e.g. dependencies). I will cover these off in greater detail in a future post.
 
 ## The Script
-You can find the script in my Github Repo [here](https://github.com/PeterDodemont/Scripts/tree/main/Install-Scripts).
+You can find the script in my Github Repo [here](https://github.com/Cyber-Unicorn-42/Scripts/tree/main/Install-Scripts).
 The script follows the same basic premise as all my other scripts. I try and make them as generic as possible and use parameters to pass the values that change. I like this approach as it means I don't need to constantly write and test new scripts.
 
 The first part of the script defines all the parameters you can pass.
