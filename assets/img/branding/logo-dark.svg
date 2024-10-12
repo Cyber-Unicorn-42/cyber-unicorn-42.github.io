@@ -2,12 +2,12 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="260mm"
-   height="25mm"
-   viewBox="0 0 260 25.000001"
+   width="800"
+   height="120"
+   viewBox="0 0 211.66667 31.750002"
    version="1.1"
    id="svg5"
-   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   inkscape:version="1.4 (e7c3feb100, 2024-10-09)"
    sodipodi:docname="logo-dark.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -21,18 +21,20 @@
      inkscape:pageshadow="0"
      inkscape:pageopacity="0"
      inkscape:pagecheckerboard="1"
-     inkscape:document-units="mm"
+     inkscape:document-units="px"
      showgrid="false"
-     inkscape:zoom="0.77771465"
-     inkscape:cx="208.94553"
-     inkscape:cy="154.29824"
+     inkscape:zoom="0.85263385"
+     inkscape:cx="500.80113"
+     inkscape:cy="-34.598673"
      inkscape:window-width="1718"
-     inkscape:window-height="1360"
-     inkscape:window-x="3589"
-     inkscape:window-y="190"
+     inkscape:window-height="1080"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
      inkscape:window-maximized="0"
      inkscape:current-layer="layer1"
-     width="260mm" />
+     width="260mm"
+     inkscape:showpageshadow="2"
+     inkscape:deskcolor="#d1d1d1" />
   <defs
      id="defs2" />
   <g
@@ -42,14 +44,16 @@
      transform="translate(-33.69007,-9.7400421)">
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:29.9861px;line-height:1.25;font-family:'3D Thirteen Pixel Fonts';-inkscape-font-specification:'3D Thirteen Pixel Fonts';fill:#820000;fill-opacity:0.746512;stroke:none;stroke-width:0.264583"
-       x="40.414696"
-       y="33.404301"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:29.9861px;line-height:1.25;font-family:'3D Thirteen Pixel Fonts';-inkscape-font-specification:'3D Thirteen Pixel Fonts';writing-mode:lr-tb;fill:#550000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="139.82327"
+       y="33.41143"
        id="text1221"><tspan
          id="tspan1219"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:29.9861px;font-family:sans-serif;-inkscape-font-specification:sans-serif;fill:#af0000;fill-opacity:0.678431;stroke-width:0.264583"
-         x="40.414696"
-         y="33.404301"
-         sodipodi:role="line">Peter Dodemont</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:29.9861px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#550000;fill-opacity:1;stroke-width:0.264583"
+         x="139.82327"
+         y="33.41143"
+         sodipodi:role="line">Cyber <tspan
+   style="line-height:1.25;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#260055;fill-opacity:1"
+   id="tspan5">Unicorn</tspan></tspan></text>
   </g>
 </svg>
