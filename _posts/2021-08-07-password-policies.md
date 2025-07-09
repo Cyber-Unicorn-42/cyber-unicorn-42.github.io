@@ -21,7 +21,7 @@ This one is actually not bad. 8 characters gives quite a wide variety of possibl
 This rule has been proven over and over again to not work. The reason for this is fairly simple, we all substitute the same characters. And why do we all replace the same characters because they are visually very close. We also tend to fall back on things we already know, so most will put a capital at the start and a punctuation at the end.
 Let's take the [classic](https://xkcd.com/936/) "correct horse battery staple". If you were to ask random people to make this "secure" you will find  that they will do one or more of the following:
 * Capital the C of correct
-* Capital the first letter of each word
+* Capitalise the first letter of each word
 * Add a exclamation mark or dot at the end
 * Replace the o's with 0's
 * Replace the s's with 5's
